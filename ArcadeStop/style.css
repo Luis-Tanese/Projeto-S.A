@@ -1,0 +1,90 @@
+body {
+    background-image: linear-gradient(90deg, #FFFFFF, #d1d1d1, #b6b6b6, #d1d1d1, #FFFFFF);
+    animation: gradiente 1s ease infinite;
+}
+
+@keyframes gradiente{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Barra de navegação */
+nav {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #FFFFFF, #d1d1d1, #b6b6b6, #d1d1d1, #FFFFFF);
+    animation: gradiente 1s ease infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav img.Logo {
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a img {
+    transition: top ease 0.5s;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    margin-right: 20px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus, .input:hover {
+    border-color: rgba(42, 74, 255, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(76, 81, 234, 0.1);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Banner de produtos */
