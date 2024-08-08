@@ -87,4 +87,163 @@ nav ul li a img {
     height: 1rem;
 }
 
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    letter-spacing: 0.05em;
+    margin: 20px 0;
+}
+
 /* Banner de produtos */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.main-image {
+    margin-right: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produtos1 {
+    background: rgb(0, 0, 0);
+    padding: 10px 18px;
+    border-radius: 15px;
+    margin: 10px 0;
+    transition: transform 0.5s ease;
+}
+
+.produtos1-main {
+    background: rgb(0, 0, 0);
+    padding: 10px 18px;
+    border-radius: 15px;
+    margin: 0 10px;
+    transition: transform 0.5s ease
+}
+
+.produtos1:hover{
+    box-shadow: 0 0 0 2px #2367cd;
+}
+
+/* Container geral do carrossel */
+.produtos-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Botões de navegação */
+#prevBtn, #nextBtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.3s ease;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #555;
+}
+
+/* Container que envolve os produtos */
+.carrossel-container {
+    overflow: hidden;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Carrossel com os produtos */
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo de cada produto */
+.produto-item {
+    min-width: 25%; /* Quatro produtos visíveis ao mesmo tempo */
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Garantir que as imagens fiquem com a mesma qualidade e tamanho */
+.produto-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa para padronizar */
+    object-fit: cover; /* Manter a qualidade da imagem */
+    object-position: center center; /* Centraliza a imagem para evitar cortes nas bordas importantes */
+    border-radius: 10px;
+}
+
+/* Estilo da caixa de informações do produto */
+.produto-item {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center; /* Centralizar o texto */
+    margin-bottom: 20px; /* Espaço inferior entre os produtos */
+}
+
+.produto-item:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Garantir que as imagens fiquem com a mesma qualidade e tamanho */
+.produto-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa para padronizar */
+    object-fit: cover; /* Manter a qualidade da imagem */
+    border-radius: 10px;
+}
+
+/* Estilo para as informações do produto */
+.produto-info {
+    background-color: #f3f3f3; /* Fundo neutro */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px; /* Espaço entre a imagem e as informações */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leve sombra */
+}
+
+/* Estilo do nome do produto */
+.produto-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+/* Estilo do preço original cortado */
+.preco-original {
+    text-decoration: line-through;
+    color: #ff6b6b;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+/* Estilo do preço com desconto */
+.preco-desconto {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* Estilo do balãozinho de desconto */
+.balao-desconto {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    padding: 3px 8px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
