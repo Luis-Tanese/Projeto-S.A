@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
     <title>ArcadeStop</title>
 </head>
 <body>
@@ -28,21 +29,96 @@
                 </li>
             </ul>
         </nav>
+        
     </div>
     <div class="produtos-1">
+        <h2>Mega Desconto da Semana</h2>
         <div class="banner">
             <div class="main-image">
-                <img id="main-img" src="Imagens/produto1.png" alt="Produto Principal" width="600" height="400">
+                <img id="main-img" src="Imagens/produto1.png" class="produtos1-main" alt="Produto Principal" width="720" height="405">
             </div>
             <div class="thumbnails">
-                <img src="Imagens/produto1.png" alt="Produto 1" width="100" height="100" onclick="changeImage('Imagens/produto1.png')">
-                <img src="Imagens/produto2.png" alt="Produto 2" width="100" height="100" onclick="changeImage('Imagens/produto2.png')">
-                <img src="Imagens/produto3.png" alt="Produto 3" width="100" height="100" onclick="changeImage('Imagens/produto3.png')">
-                <img src="Imagens/produto4.png" alt="Produto 4" width="100" height="100" onclick="changeImage('Imagens/produto4.png')">
+                <img src="Imagens/produto1.png" alt="Produto 1" class="produtos1" width="160" height="90" onclick="trocarImagem('Imagens/produto1.png')">
+                <img src="Imagens/produto2.png" alt="Produto 2" class="produtos1" width="160" height="90" onclick="trocarImagem('Imagens/produto2.png')">
+                <img src="Imagens/produto3.png" alt="Produto 3" class="produtos1" width="160" height="90" onclick="trocarImagem('Imagens/produto3.png')">
             </div>
         </div>
     </div>
-    <div class="produtos-2"></div>
+    <div class="produtos-2">
+        <h2>Best Sellers</h2>
+        <button id="prevBtn">❮</button>
+    <div class="carrossel-container">
+        <div class="carrossel">
+            <div class="produto-item">
+                <img src="Imagens/produto4.png" alt="Produto 4">
+                <div class="produto-info">
+                    <h3>Produto 4</h3>
+                    <p class="preco">
+                        <span class="preco-original">R$ 100,00</span>
+                        <span class="preco-desconto">R$ 80,00</span>
+                        <span class="balao-desconto">-20%</span>
+                    </p>
+                </div>
+            </div>
+            <div class="produto-item">
+                <img src="Imagens/produto5.png" alt="Produto 5">
+                <div class="produto-info">
+                    <h3>Produto 5</h3>
+                    <p class="preco">
+                        <span class="preco-original">R$ 150,00</span>
+                        <span class="preco-desconto">R$ 120,00</span>
+                        <span class="balao-desconto">-20%</span>
+                    </p>
+                </div>
+            </div>
+            <div class="produto-item">
+                <img src="Imagens/produto6.png" alt="Produto 6">
+                <div class="produto-info">
+                    <h3>Produto 6</h3>
+                    <p class="preco">
+                        <span class="preco-original">R$ 150,00</span>
+                        <span class="preco-desconto">R$ 120,00</span>
+                        <span class="balao-desconto">-20%</span>
+                    </p>
+                </div>
+            </div>
+            <div class="produto-item">
+                <img src="Imagens/produto7.png" alt="Produto 7">
+                <div class="produto-info">
+                    <h3>Produto 7</h3>
+                    <p class="preco">
+                        <span class="preco-original">R$ 150,00</span>
+                        <span class="preco-desconto">R$ 120,00</span>
+                        <span class="balao-desconto">-20%</span>
+                    </p>
+                </div>
+            </div>
+            <div class="produto-item">
+                <img src="Imagens/produto8.png" alt="Produto 8">
+                <div class="produto-info">
+                    <h3>Produto 8</h3>
+                    <p class="preco">
+                        <span class="preco-original">R$ 150,00</span>
+                        <span class="preco-desconto">R$ 120,00</span>
+                        <span class="balao-desconto">-20%</span>
+                    </p>
+                </div>
+            </div>
+            <div class="produto-item">
+                <img src="Imagens/produto9.png" alt="Produto 9">
+                <div class="produto-info">
+                    <h3>Produto 9</h3>
+                    <p class="preco">
+                        <span class="preco-original">R$ 150,00</span>
+                        <span class="preco-desconto">R$ 120,00</span>
+                        <span class="balao-desconto">-20%</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="nextBtn">❯</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
