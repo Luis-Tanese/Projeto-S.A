@@ -44,80 +44,31 @@
             </div>
         </div>
     </div>
-    <div class="produtos-2">
+    <div class="categorias">
         <h2>Best Sellers</h2>
-        <button id="prevBtn">❮</button>
-    <div class="carrossel-container">
-        <div class="carrossel">
-            <div class="produto-item">
-                <img src="Imagens/produto4.png" alt="Produto 4">
-                <div class="produto-info">
-                    <h3>Produto 4</h3>
-                    <p class="preco">
-                        <span class="preco-original">R$ 100,00</span>
-                        <span class="preco-desconto">R$ 80,00</span>
-                        <span class="balao-desconto">-20%</span>
-                    </p>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="Imagens/produto5.png" alt="Produto 5">
-                <div class="produto-info">
-                    <h3>Produto 5</h3>
-                    <p class="preco">
-                        <span class="preco-original">R$ 150,00</span>
-                        <span class="preco-desconto">R$ 120,00</span>
-                        <span class="balao-desconto">-20%</span>
-                    </p>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="Imagens/produto6.png" alt="Produto 6">
-                <div class="produto-info">
-                    <h3>Produto 6</h3>
-                    <p class="preco">
-                        <span class="preco-original">R$ 150,00</span>
-                        <span class="preco-desconto">R$ 120,00</span>
-                        <span class="balao-desconto">-20%</span>
-                    </p>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="Imagens/produto7.png" alt="Produto 7">
-                <div class="produto-info">
-                    <h3>Produto 7</h3>
-                    <p class="preco">
-                        <span class="preco-original">R$ 150,00</span>
-                        <span class="preco-desconto">R$ 120,00</span>
-                        <span class="balao-desconto">-20%</span>
-                    </p>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="Imagens/produto8.png" alt="Produto 8">
-                <div class="produto-info">
-                    <h3>Produto 8</h3>
-                    <p class="preco">
-                        <span class="preco-original">R$ 150,00</span>
-                        <span class="preco-desconto">R$ 120,00</span>
-                        <span class="balao-desconto">-20%</span>
-                    </p>
-                </div>
-            </div>
-            <div class="produto-item">
-                <img src="Imagens/produto9.png" alt="Produto 9">
-                <div class="produto-info">
-                    <h3>Produto 9</h3>
-                    <p class="preco">
-                        <span class="preco-original">R$ 150,00</span>
-                        <span class="preco-desconto">R$ 120,00</span>
-                        <span class="balao-desconto">-20%</span>
-                    </p>
-                </div>
-            </div>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('best-sellers', -1)">❮</button>
+            <div id="best-sellers" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('best-sellers', 1)">❯</button>
         </div>
     </div>
-    <button id="nextBtn">❯</button>
+    
+    <div class="categorias">
+        <h2>Novidades</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('novidades', -1)">❮</button>
+            <div id="novidades" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('novidades', 1)">❯</button>
+        </div>
+    </div>
+    
+    <div class="categorias">
+        <h2>Melhores Video Games</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('mais-vendidos', -1)">❮</button>
+            <div id="melhores-videogames" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('mais-vendidos', 1)">❯</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
