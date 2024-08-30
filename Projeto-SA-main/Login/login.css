@@ -1,0 +1,70 @@
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.esquerda {
+    background-color: rgb(0, 106, 255);
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.direita {
+    background-color: white;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+h1 {
+    font-weight: normal;
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight:normal;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 40%;
+}
+
+h4.textoFoda {
+    position: relative;
+    top: -200px; 
+    font-size: 18px; 
+    margin: 0; 
+    font-weight:normal;
+}
+
+img {
+    width: 60%;
+    margin-top: 10%;
+}
+
+.Formulario {
+    margin-top: 10%;
+}
+
+.Formulario input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: #d3d3d3;
+    font-size: 16px;
+    color: #333;
+}
