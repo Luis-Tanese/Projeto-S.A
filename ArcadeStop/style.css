@@ -15,6 +15,7 @@ body {
     }
 }
 
+/* Barra de navegação */
 nav {
     display: flex;
     width: 100%;
@@ -96,6 +97,7 @@ h2 {
     margin: 20px 0;
 }
 
+/* Banner de produtos */
 .banner {
     display: flex;
     align-items: center;
