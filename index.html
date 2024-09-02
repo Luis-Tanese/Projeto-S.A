@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+    <title>ArcadeStop</title>
+</head>
+<body>
+    <div class="barra-de-cima">
+        <nav>
+
+            <img src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+
+            <ul>
+                <li>
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                        <input placeholder="Search" type="search" class="input">
+                    </div>
+                </li>
+                <li>
+                    <a id="login" href="/login.html"><img src="Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a>
+                </li>
+                <li>
+                    <a href="https://i.redd.it/silly-kitty-3-v0-4grm3kfbym1c1.jpg?width=3472&format=pjpg&auto=webp&s=b3a4a0390aada923298220b370f0aeec00cee1db" target="_blank"><img src="Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+    <div class="produtos-1">
+        <h2>Mega Desconto da Semana</h2>
+        <div class="banner">
+            <div class="main-image">
+                <img id="main-img" src="Imagens/produto1.png" class="produtos1-main" alt="Produto Principal" width="720" height="405">
+            </div>
+            <div class="thumbnails">
+                <img src="Imagens/produto1.png" alt="Produto 1" class="produtos1" width="160" height="90" onclick="trocarImagem('Imagens/produto1.png')">
+                <img src="Imagens/produto2.png" alt="Produto 2" class="produtos1" width="160" height="90" onclick="trocarImagem('Imagens/produto2.png')">
+                <img src="Imagens/produto3.png" alt="Produto 3" class="produtos1" width="160" height="90" onclick="trocarImagem('Imagens/produto3.png')">
+            </div>
+        </div>
+    </div>
+    <div class="categorias">
+        <h2>Best Sellers</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('best-sellers', -1)">❮</button>
+            <div id="best-sellers" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('best-sellers', 1)">❯</button>
+        </div>
+    </div>
+    
+    <div class="categorias">
+        <h2>Novidades</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('novidades', -1)">❮</button>
+            <div id="novidades" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('novidades', 1)">❯</button>
+        </div>
+    </div>
+    
+    <div class="categorias">
+        <h2>Melhores Video Games</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('mais-vendidos', -1)">❮</button>
+            <div id="melhores-videogames" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('mais-vendidos', 1)">❯</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
