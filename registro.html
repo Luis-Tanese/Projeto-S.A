@@ -24,33 +24,33 @@
                 <p class="message">Preencha os campos abaixo para criar uma conta.</p>
                 <div class="flex">
                     <label>
-                        <input required="" placeholder="" type="text" class="input">
-                        <span>Nome</span>
+                        <input required="" placeholder="" id = "nome" type="text" class="input">
+                        <span  id="spanNome">Nome</span>
                     </label>
-
                     <label>
-                        <input required="" placeholder="" type="text" class="input">
-                        <span>Sobrenome</span>
+                        <input required="" placeholder="" id = "sobrenome" type="text" class="input">
+                        <span id="spanSobrenome" >Sobrenome</span>
                     </label>
                 </div>  
-                        
+                       
                 <label>
-                    <input required="" placeholder="" type="email" class="input">
-                    <span>Email</span>
-                </label> 
-                    
+                    <input required="" placeholder="" id = "email" type="email" class="input">
+                    <span id="spanEmail" >Email</span>
+                </label>
+                   
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
-                    <span>Senha</span>
+                    <input required="" placeholder="" id = "senha" type="password" class="input">
+                    <span id="spanSenha">Senha</span>
                 </label>
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
-                    <span>Confirmar senha</span>
+                    <input required="" placeholder="" id = "confirmaSenha" type="password" class="input">
+                    <span id="spanConfirmaSenha">Confirmar senha</span>
                 </label>
-                <button class="submit">Cadastrar</button>
+                <button class="submit" onclick="cadastrar()">Cadastrar</button>
                 <p class="signin">Já tem uma conta? <a href="/login.html">Fazer Login</a></p>
             </form>
         </div>
     </div>
 </body>
+<script src="registro.js"></script>
 </html>
