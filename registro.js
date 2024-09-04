@@ -1,29 +1,33 @@
-let nome = document.getElementById('nome')
-let spanNome = document.getElementById('spanNome')
+const nome = document.getElementById('nome')
+const spanNome = document.getElementById('spanNome')
 validNome = false
-let sobrenome = document.getElementById('sobrenome')
-let spanSobrenome = document.getElementById('spanSobrenome')
+const sobrenome = document.getElementById('sobrenome')
+const spanSobrenome = document.getElementById('spanSobrenome')
 validSobrenome = false
-let email = document.getElementById('email')
-let spanEmail = document.getElementById('spanEmail')
+const email = document.getElementById('email')
+const spanEmail = document.getElementById('spanEmail')
 validEmail = false
-let senha = document.getElementById('senha')
-let spanSenha = document.getElementById('spanSenha')
+const senha = document.getElementById('senha')
+const spanSenha = document.getElementById('spanSenha')
 validSenha = false
-let confirmaSenha = document.getElementById('confirmaSenha')
-let spanConfirmaSenha  = document.getElementById('spanConfirmaSenha')
+const confirmaSenha = document.getElementById('confirmaSenha')
+const spanConfirmaSenha  = document.getElementById('spanConfirmaSenha')
 validConfirmaSenha = false
+
 email.addEventListener('keyup', () => {
-    if(email.value.endsWith('@gmail.com')){
-        spanEmail.setAttribute('style', 'color: green')
-        email.setAttribute('style', 'border-color: green')
-        validEmail = true
-    }else{
-        validEmail = false
-        spanEmail.setAttribute('style', 'color :red')
-        email.setAttribute('style', 'border-color: red')
+    const validDomains = ['@gmail.com', '@yahoo.com', '@outlook.com', '@hotmail.com', '@aol.com'];
+    const isValidDomain = validDomains.some(domain => email.value.endsWith(domain));
+    if (isValidDomain) {
+        spanEmail.setAttribute('style', 'color: green');
+        email.setAttribute('style', 'border-color: green');
+        validEmail = true;
+    } else {
+        validEmail = false;
+        spanEmail.setAttribute('style', 'color: red');
+        email.setAttribute('style', 'border-color: red');
     }
 })
+
 sobrenome.addEventListener('keyup', () => {
     if(sobrenome.value.length <= 2){
         validSobrenome = false
@@ -35,6 +39,7 @@ sobrenome.addEventListener('keyup', () => {
         sobrenome.setAttribute('style', 'border-color: green')
     }
 })
+
 nome.addEventListener('keyup', () => {
     if(nome.value.length <= 2){
         validNome  = false
@@ -46,6 +51,7 @@ nome.addEventListener('keyup', () => {
         nome.setAttribute('style', 'border-color: green')
     }
 })
+
 senha.addEventListener('keyup', () => {
     if(senha.value.length <= 5){
         validSenha = false
@@ -72,8 +78,27 @@ confirmaSenha.addEventListener('keyup', () => {
 
 function cadastrar(){
     if(validEmail && validSenha && validSobrenome && validNome  && validConfirmaSenha){
-        window.location.href='login.html'
-    }else{
+        const nameValue = document.getElementById('nome').value
+        const sobreNomeValue = document.getElementById('sobrenome').value
+        const emailValue = document.getElementById('email').value
+        const senhaValue = document.getElementById('senha').value
+        const registro = {
+            nome: nameValue,
+            sobreNome: sobreNomeValue,
+            email: emailValue,
+            senha: senhaValue
+        }
+        const senha = {
+            email: emailValue,
+            senha: senhaValue
+        }
+        const registroString = JSON.stringify(registro)
+        const loginString = JSON.stringify(senha)
+        console.log(registroString + " " + registro)
+        localStorage.setItem("registro", registroString)
+        localStorage.setItem("login", loginString)
+        window.location.href = 'http://127.0.0.1:5500/login.html'
+    } else {
         alert('algo está errado.')
     }
 }
