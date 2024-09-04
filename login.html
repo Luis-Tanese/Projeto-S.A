@@ -23,18 +23,19 @@
                 <p class="title">Bem vindo de volta!</p>
                 <p class="message">Preencha os campos abaixo para fazer login.</p>
                 <label>
-                    <input required="" placeholder="" type="email" class="input">
-                    <span>Email</span>
+                    <input required="" placeholder="" id="email" type="email" class="input">
+                    <span id="spanEmail">Email</span>
                 </label> 
                     
                 <label>
-                    <input required="" placeholder="" type="password" class="input">
-                    <span>Senha</span>
+                    <input required="" placeholder="" id="senha" type="password" class="input">
+                    <span span="spanSenha">Senha</span>
                 </label>
-                <button class="submit">Login</button>
+                <button class="submit" onclick="login()">Login</button>
                 <p class="signin">Não tem uma conta? <a href="/registro.html">Cadastre-se!</a></p>
             </form>
         </div>
     </div>
 </body>
+<script src="login.js"></script>
 </html>
