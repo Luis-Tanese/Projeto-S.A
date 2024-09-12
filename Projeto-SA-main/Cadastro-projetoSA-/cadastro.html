@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div class="EmVolta">
+
+        <img src="Imagens/Produtos.png" alt="">
+
+        <div class="PrincipalVolta">
+
+            <h1 class="title">Criar Conta</h1>
+
+            <p>Por favor, responda o questionário abaixo para finalizar seu cadastro!</p>
+
+            <form class="FormulárioPrincipal">
+
+                <div>
+                    <label>
+                        <p class="textoCaixaSuperior1">Crie um nome:</p>
+                        <input required="" type="text" placeholder="dica: Não coloque seu nome verdadeiro" class="input" id="NamerUser">
+                    </label>
+                </div>
+                
+                <div>
+                    <label>
+                        <p class="textoCaixaSuperior">Seu número de telefone:</p>
+                        <input required="" type="text" placeholder="Ex: (48) 9999-9999" class="input" id="TelefoneUser">
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <p class="textoCaixaSuperior">Seu e-mail::</p>
+                        <input required="" type="text" placeholder="Ex: ReiDelas@gmail.com" class="input" id="email">
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <p class="textoCaixaSuperior">Crie uma senha:</p>
+                        <input required="" type="text" placeholder="dica: Mais de 8 caracteres" class="input" id="CrieSenha">
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <p class="textoCaixaSuperior">Confirme sua senha:</p>
+                        <input required="" type="text" placeholder="Escreva novamente a sua senha" class="input" id="ConfrimaSenha">
+                    </label>
+                </div>
+
+                <button onclick="CriarConta()" class="submit">Criar Conta</button>
+
+            </form>
+
+            <button onclick="Voltar()" class="Back">Voltar</button>
+            
+        </div>
+
+        
+        
+    </div>
+    
+    
+</body>
+</html>
