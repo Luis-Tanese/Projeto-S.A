@@ -5,19 +5,20 @@ function trocarImagem(src) {
 const produtosBest = [
     {nome: "Produto 4", precoOriginal: 100, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20},
     {nome: "Produto 5", precoOriginal: 150, precoDesconto: 120, imagem: "Imagens/produto5.png", desconto: 20},
-    {nome: "Produto 6", precoOriginal: 200, precoDesconto: 100, imagem: "Imagens/produto6.png", desconto: 50}
+    {nome: "Produto 6", precoOriginal: 200, precoDesconto: 100, imagem: "Imagens/produto6.png", desconto: 50},
+    {nome: "Produto 4", precoOriginal: 100, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20}
 ];
 
 produtosBest.forEach(produto => {
     adicionarProduto('best-sellers', produto.nome, produto.precoOriginal, produto.precoDesconto, produto.imagem, produto.desconto);
 });
 
-const produtosNovidades = [
+const produtosPerifericos = [
     {nome: "Produto 7", precoOriginal: 300, precoDesconto: 200, imagem: "Imagens/produto7.png", desconto: 33}
 ];
 
-produtosNovidades.forEach(produto => {
-    adicionarProduto('novidades', produto.nome, produto.precoOriginal, produto.precoDesconto, produto.imagem, produto.desconto);
+produtosPerifericos.forEach(produto => {
+    adicionarProduto('perifericos', produto.nome, produto.precoOriginal, produto.precoDesconto, produto.imagem, produto.desconto);
 });
 
 const produtosMelhores = [
