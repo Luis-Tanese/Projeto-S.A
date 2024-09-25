@@ -15,7 +15,6 @@ body {
     }
 }
 
-/* Barra de navegação */
 nav {
     display: flex;
     width: 100%;
@@ -157,6 +156,10 @@ h2 {
     margin: 10px;
     text-align: center;
     flex-shrink: 0;
+}
+
+.produto-item .preco-original {
+    text-decoration: line-through;
 }
 
 .produto-item img {
