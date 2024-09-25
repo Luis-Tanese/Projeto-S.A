@@ -6,7 +6,8 @@ const produtosBest = [
     {nome: "Produto 4", precoOriginal: 100, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20},
     {nome: "Produto 5", precoOriginal: 150, precoDesconto: 120, imagem: "Imagens/produto5.png", desconto: 20},
     {nome: "Produto 6", precoOriginal: 200, precoDesconto: 100, imagem: "Imagens/produto6.png", desconto: 50},
-    {nome: "Produto 4", precoOriginal: 100, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20}
+    {nome: "Produto 4", precoOriginal: 100, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20},
+    {nome: "Produto 4", precoOriginal: 500, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20}
 ];
 
 produtosBest.forEach(produto => {
@@ -40,18 +41,20 @@ function moverCarrossel(categoria, direcao) {
 
 function adicionarProduto(categoria, nome, precoOriginal, precoDesconto, imagem, desconto) {
     const container = document.getElementById(categoria);
-
+    let linkProduto = nome.replace(" ", "")
     const produtoHTML = `
         <div class="produto-item">
+            <a href="${linkProduto}.html" style="text-decoration: none; color: black">
             <img src="${imagem}" alt="${nome}">
             <div class="produto-info">
                 <h3>${nome}</h3>
                 <p class="preco">
                     <span class="preco-original">R$ ${precoOriginal}</span>
                     <span class="preco-desconto">R$ ${precoDesconto}</span>
-                    <span class="balao-desconto">${desconto}%</span>
+                    <div class="balao-desconto">Desconto: ${desconto}%</div>
                 </p>
             </div>
+            </a>
         </div>
     `;
     container.innerHTML += produtoHTML;
