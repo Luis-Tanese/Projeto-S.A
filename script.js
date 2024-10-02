@@ -1,7 +1,3 @@
-function trocarImagem(src) {
-    document.getElementById('main-img').src = src;
-}
-
 const produtosBest = [
     {nome: "Produto 4", precoOriginal: 100, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20},
     {nome: "Produto 5", precoOriginal: 150, precoDesconto: 120, imagem: "Imagens/produto5.png", desconto: 20},
