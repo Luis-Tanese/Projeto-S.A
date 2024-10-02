@@ -62,7 +62,7 @@ function moverCarrossel(categoria, direcao) {
 
 function adicionarProduto(categoria, nome, precoOriginal, precoDesconto, imagem, desconto) {
     const container = document.getElementById(categoria);
-    let linkProduto = nome.replace(" ", "")
+    let linkProduto = nome.replace(" ", "-")
     const produtoHTML = `
         <div class="produto-item">
             <a href="${linkProduto}.html" style="text-decoration: none; color: black">
