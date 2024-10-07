@@ -76,3 +76,30 @@ function adicionarProduto(categoria, nome, precoOriginal, precoDesconto, imagem,
     `;
     container.innerHTML += produtoHTML;
 }
+
+let images = [
+    "Imagens/produto12.png", 
+    "Imagens/produto13.png", 
+    "Imagens/produto14.png"
+];
+let currentIndex = 0;
+let intervalTime = 5000;
+let bannerImage = document.getElementById('banner-image');
+let buttons = document.querySelectorAll('.banner-btn');
+let activeButtons = [false, false, false];
+
+function changeBanner() {
+    bannerImage.src = images[currentIndex];
+    buttons.forEach((btn, idx) => {
+        if (idx === currentIndex) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+    currentIndex = (currentIndex + 1) % images.length;
+}
+setInterval(changeBanner, intervalTime);
+changeBanner();
+
+
