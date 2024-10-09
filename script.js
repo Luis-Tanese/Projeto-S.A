@@ -97,6 +97,18 @@ function adicionarProduto(categoria, nome, precoOriginal, precoDesconto, imagem,
     container.innerHTML += produtoHTML;
 }
 
+const modal = document.getElementById ("modalEsgotado");
+const buttonClose = document.getElementById ("fecharModal");
+
+function produtoEsgotado() {
+     
+    modal.showModal();
+}
+buttonClose.onclick = function (){
+
+    modal.close();
+}
+
 let images = [
     "Imagens/produto12.png", 
     "Imagens/produto13.png", 
