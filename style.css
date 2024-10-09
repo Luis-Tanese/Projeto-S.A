@@ -242,3 +242,36 @@ h2 {
 .banner-btn.active:after {
     transform: scaleX(1);
 }
+
+dialog{
+
+    width: 450px;
+    border-radius: 5px;
+}
+
+dialog::backdrop{
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.textModal{
+
+    font-size: 20px;
+}
+
+#fecharModal{
+
+    float: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#fecharModal:hover{
+
+    background-color: #888;
+}
