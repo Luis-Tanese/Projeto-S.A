@@ -68,26 +68,26 @@ function adicionarProduto(categoria, nome, precoOriginal, precoDesconto, imagem,
             <div class="produto-info">
                 <h3>${nome}</h3>
                 <p class="preco">
+                    <span class="balao-desconto"> ${desconto}% </span>
                     <span class="preco-original">R$ ${precoOriginal}</span>
-                    <span class="preco-desconto">R$ ${precoDesconto}</span>
-                    <div class="balao-desconto">Desconto: ${desconto}%</div>
+                    <div class="preco-desconto">R$ ${precoDesconto}</div>
                 </p>
             </div>
             </a>
         </div>
     `;
     } else {
-        let linkProduto = nome.replace(" ", "%20");
+        let linkProduto = nome.replace(/\s+/g, "-");
         produtoHTML = `
         <div class="produto-item">
-            <a href="${linkProduto}.html" style="text-decoration: none; color: black">
+            <a href="SitesProdutos/${linkProduto}.html" style="text-decoration: none; color: black">
             <img src="${imagem}" alt="${nome}">
             <div class="produto-info">
                 <h3>${nome}</h3>
                 <p class="preco">
+                    <span class="balao-desconto"> ${desconto}% </span>
                     <span class="preco-original">R$ ${precoOriginal}</span>
-                    <span class="preco-desconto">R$ ${precoDesconto}</span>
-                    <div class="balao-desconto">Desconto: ${desconto}%</div>
+                    <div class="preco-desconto">Preço: R$ ${precoDesconto}</div>
                 </p>
             </div>
             </a>
@@ -133,5 +133,3 @@ function changeBanner() {
 }
 setInterval(changeBanner, intervalTime);
 changeBanner();
-
-
