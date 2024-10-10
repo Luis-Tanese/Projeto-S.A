@@ -149,13 +149,12 @@ h2 {
 .produto1{
     height: 600px;
     margin-left: 45px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .outros-produtos1{
     height: 80px;
     width: 150px;
-    padding-bottom: 15px;
+
 }
 
 
@@ -164,11 +163,11 @@ h2 {
 }
 
 #Descricao{
-    margin-top: -7%;
+    margin-top: -8%;
 }
 
 .outros-produtos{
-    margin-left: 290px;
+    margin-left: 370px;
 }
 
 .Adicionar-Carrinho {
@@ -248,9 +247,19 @@ h1{
 
 .sobre-desconto{
     display: flex;
-    margin-top: 55%;
+    margin-top: 70%;
 }
 
 .titulo-outro-produto{
     margin-left: 20%;
+}
+
+.imagem-produto-central{
+    background-color: grey;
+    width: 60%;
+    height: 60%;
+    margin-left: 3%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
