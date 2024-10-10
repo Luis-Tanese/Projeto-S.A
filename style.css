@@ -134,6 +134,11 @@ h2 {
     text-decoration: line-through;
 }
 
+.balao-desconto {
+    border-radius: 5px;
+    background-color: rgb(93, 176, 253);
+}
+
 .produto-item img {
     width: 200px;
     height: 200px;
