@@ -77,15 +77,38 @@
         </div>
     </div>
     <div class="modal">
-
         <dialog id="modalEsgotado">
-
             <button id="fecharModal"><strong>X</strong></button>
             <h1>AVISO!</h1>
             <p class="textModal"> O produto selecionado está temporariamente sem estoque. Pedimos desculpas pelo inconveniente e agradecemos pela sua compreensão. Fique à vontade para explorar outras opções em nosso site!</p>
-
         </dialog>
-        
+    </div>
+    <button onclick="abrirCarrin()">Abrir carrinho</button>
+    <div class="carrinhoModal">
+        <dialog id="modalCarrinho">
+            <button id="fecharCarrinho"><strong>X</strong></button>
+            <h1 class="tituloCarrinho">Suas compras</h1>
+
+            <div class="produtosCarrinhoModal1">   
+            </div>
+            <div class="produtosCarrinhoModal2">
+            </div>
+            <div class="produtosCarrinhoModal3">
+            </div>
+            <div>
+                <br><p id="produto1c">kkkkkkkkkkkkkkkkk...</p><p id="produto2c">kkkkkkkkkkkkkkkkk...</p><p id="produto3c">kkkkkkkkkkkkkkkkk...</p>
+            </div>
+            <div class="produtosCarrinhoModal4">
+            </div>
+            <div class="produtosCarrinhoModal5">
+            </div>
+            <div class="produtosCarrinhoModal6">
+            </div>
+            <div>
+                <br><p id="produto4c">kkkkkkkkkkkkkkkkk...</p><p id="produto5c">kkkkkkkkkkkkkkkkk...</p><p id="produto6c">kkkkkkkkkkkkkkkkk...</p>
+            </div>
+            <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
+        </dialog>
     </div>
 </body>
 <script src="script.js"></script>
