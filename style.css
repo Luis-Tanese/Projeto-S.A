@@ -248,13 +248,13 @@ h2 {
     transform: scaleX(1);
 }
 
-dialog{
+#modalEsgotado{
 
     width: 450px;
     border-radius: 5px;
 }
 
-dialog::backdrop{
+#modalEsgotado::backdrop{
 
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -278,5 +278,128 @@ dialog::backdrop{
 
 #fecharModal:hover{
 
-    background-color: #888;
+    background-color: rgb(133, 131, 131);
+}
+
+#modalCarrinho{
+
+    background-color: rgb(204, 204, 204);
+    width: 30%;
+    height: 100%;
+    border: none;
+    position: fixed;
+    left: 68%;
+    top: 27%;
+}
+
+#modalCarrinho::backdrop{
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.tituloCarrinho{
+
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 2px solid;
+    padding-bottom: 15px;
+}
+
+#fecharCarrinho{
+
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    
+    width: 40px;
+    height: 40px;
+
+    transition: transform 0.5s;
+    transform: translateX(0) scale(0.95);
+
+}
+
+#fecharCarrinho:hover{
+
+    cursor: pointer;
+    transform: translateX(0) scale(1.05);
+}
+
+.produtosCarrinhoModal1, .produtosCarrinhoModal2, .produtosCarrinhoModal3, .produtosCarrinhoModal4, .produtosCarrinhoModal5, .produtosCarrinhoModal6{
+
+    background-color: white;
+    display: inline-block;
+    width: 23%;
+    height: 20%;
+    margin-left: 7.5%;
+    margin-top: 3%;
+    margin-bottom: -6%;
+}
+
+#produto1c, #produto2c, #produto3c, #produto4c, #produto5c, #produto6c {
+
+    display: inline-block;
+    text-align: center;
+
+    width: 23%;
+    height: 20%;
+
+}
+
+#produto1c{
+
+    margin-left: 7.5%;
+}
+
+#produto2c{
+
+    margin-left: 8.1%;
+}
+
+#produto3c{
+
+    margin-left: 8.2%;
+}
+
+#produto4c{
+
+    margin-left: 7.5%;
+}
+
+#produto5c{
+
+    margin-left: 8.1%;
+}
+
+#produto6c{
+
+    margin-left: 8.2%;
+}
+
+#comprarCarrinho{
+
+    background-color: #357de9;
+    color: white;
+    font-size: 27px;
+    border: none;
+    border-radius: 15px;
+
+    position: absolute;
+    left: 33%;
+    top: 77%;
+    width: 35%;
+    height: 7%;
+
+    transition: transform 0.5s;
+    transform: translateX(0) scale(0.95);
+}
+
+#comprarCarrinho:hover{
+
+    cursor: pointer;
+    background-color: rgb(93, 176, 253);
+    transform: translateX(0) scale(1.05);
 }
