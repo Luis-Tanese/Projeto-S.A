@@ -109,6 +109,18 @@ buttonClose.onclick = function (){
     modal.close();
 }
 
+const modalC = document.getElementById ("modalCarrinho");
+const fecharC = document.getElementById ("fecharCarrinho");
+
+function abrirCarrin() {
+     
+    modalC.showModal();
+}
+fecharC.onclick = function (){
+
+    modalC.close();
+}
+
 let images = [
     "Imagens/produto12.png", 
     "Imagens/produto13.png", 
