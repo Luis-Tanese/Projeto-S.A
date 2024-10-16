@@ -46,7 +46,8 @@ nav ul li a img {
     display: flex;
     align-items: center;
     position: relative;
-    width: 1000px;
+    width: 700px;
+
 }
 
 .input {
@@ -79,6 +80,7 @@ nav ul li a img {
     width: 1rem;
     height: 1rem;
 }
+
 
 #carrinho{
 
