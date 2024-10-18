@@ -1,18 +1,14 @@
-// Recupera os produtos armazenados no localStorage ou inicializa o array vazio
 let produtosRecentes = JSON.parse(localStorage.getItem('produtosRecentesStorage')) || [];
 
-// Função para salvar produtos no localStorage
 function salvarProdutoLocalStorage(produto) {
     produtosRecentes.push(produto);
     localStorage.setItem('produtosRecentesStorage', JSON.stringify(produtosRecentes));
 }
 
-// Função para calcular o preço com desconto
 function calcularPrecoComDesconto(preco, desconto) {
     return (preco - (preco * (desconto / 100))).toFixed(2);
 }
 
-// Função para adicionar o produto à interface
 function adicionarProduto(produto) {
     const container = document.getElementById('produtos-recentes');
     const precoDesconto = calcularPrecoComDesconto(produto.precoOriginal, produto.desconto);
@@ -35,12 +31,10 @@ function adicionarProduto(produto) {
     container.innerHTML += produtoHTML;
 }
 
-// Função para carregar os produtos recentes ao abrir a página
 function carregarProdutosRecentes() {
     produtosRecentes.forEach(produto => adicionarProduto(produto));
 }
 
-// Função que cria a página do produto e a salva no localStorage
 function abrirProduto(nomeProduto) {
     const produto = produtosRecentes.find(p => p.nome === nomeProduto);
     if (produto) {
@@ -61,12 +55,10 @@ function abrirProduto(nomeProduto) {
             </html>
         `;
         localStorage.setItem(`pagina_${produto.nome}`, paginaProduto);
-        // Simula abrir a página salva
         document.write(paginaProduto);
     }
 }
 
-// Evento do formulário para adicionar um produto
 document.getElementById('form-produto').addEventListener('submit', function (e) {
     e.preventDefault();
     
@@ -84,13 +76,9 @@ document.getElementById('form-produto').addEventListener('submit', function (e) 
         imagem,
         desconto
     };
-
     salvarProdutoLocalStorage(novoProduto);
     adicionarProduto(novoProduto);
-    
-    // Limpa o formulário após salvar
     document.getElementById('form-produto').reset();
 });
 
-// Carregar produtos recentes ao abrir a página
 carregarProdutosRecentes();
