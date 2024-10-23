@@ -76,9 +76,10 @@ function adicionarProduto(categoria, produto) {
         </div>
     `;
     } else {
+        let linkProduto = produto.nome.replace(/\s+/g, "-");
         produtoHTML = `
         <div class="produto-item">
-            <a href="javascript:void(0);" onclick="abrirProdutoNormal('${categoria}', '${produto.nome}')" style="text-decoration: none; color: black">
+            <a href="SitesProdutos/${linkProduto}.html" style="text-decoration: none; color: black">
             <img src="${produto.imagem}" alt="${produto.nome}">
             <div class="produto-info">
                 <h3>${produto.nome}</h3>
@@ -95,130 +96,13 @@ function adicionarProduto(categoria, produto) {
     container.innerHTML += produtoHTML;
 }
 
-function abrirProdutoNormal(categoria, nomeProduto) {
-    let produtos;
-    if (categoria === 'best-sellers') {
-        produtos = produtosBest;
-    } else if (categoria === 'perifericos') {
-        produtos = produtosPerifericos;
-    } else if (categoria === 'mais-vendidos') {
-        produtos = produtosMelhores;
-    } else {
-        console.error("Categoria desconhecida:", categoria);
-        return;
-    }
-    produto = produtos.find(p => p.nome === nomeProduto);
-    if (produto) {
-        const novaPagina = window.open('', '_blank');
-        const paginaProduto = `
-        <!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="Placeholder.css">
-            <title>${produto.nome}</title>
-        </head>
-        <body>
-
-            <div class="barra-de-cima">
-                <nav>
-                    <img src="../Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
-                    <ul>
-                        <li>
-                            <div class="group">
-                                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                                <input placeholder="Search" type="search" class="input">
-                            </div>
-                        </li>
-                        <li>
-                            <a id="login" href="/login.html"><img src="../Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a>
-                        </li>
-                        <li>
-                            <a href="https://i.redd.it/silly-kitty-3-v0-4grm3kfbym1c1.jpg?width=3472&format=pjpg&auto=webp&s=b3a4a0390aada923298220b370f0aeec00cee1db" target="_blank"><img src="../Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <br>
-            <a href="index.html">Voltar ás compras </a>
-            <br>
-            <div class="flex-container">
-                <div class="imagem-produto-central">
-                    <img class="produto1" src="${produto.imagem}" alt="${produto.nome}">
-                </div>
-                <div class="avaliacao-adicionarCarrinho">
-                    <h1 class="nome-produto">${produto.nome}</h1>
-                    <div class="alinhas-flex">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
-                    </div>
-                    <div class="sobre-desconto">
-                        <h3 class="desconto">${produto.desconto}%</h3>
-                        <h3 class="valor-original-produto">R$: ${produto.precoOriginal}</h3>
-                    </div>
-                    <h3 class="preco-com-desconto">R$: ${calcularPrecoComDesconto(produto.precoOriginal, produto.desconto)}</h3>
-                    <button class="Adicionar-Carrinho">Adicionar ao Carrinho</button>
-                </div>
-                <div class="descricao">
-                    <h1 id="Descricao">Descrição:</h1>
-                    <br>
-                    <p>Lorem Ipsum</p>
-                </div>
-            
-                <div class="outros-produtos">
-                    <h1 class="titulo-outro-produto">Outros produtos:</h1>
-                    <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
-                        </div>
-                    </div>
-                    <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
-                        </div>
-                    </div>
-                    <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
-                        </div>
-                    </div>
-                    <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </body>
-        <script src="Placeholder.js"></script>
-        </html>
-        `;
-        novaPagina.document.write(paginaProduto);
-        novaPagina.document.close();
-    }
-}
-
 const modal = document.getElementById ("modalEsgotado");
 const buttonClose = document.getElementById ("fecharModal");
 
 function produtoEsgotado() {
-     
     modal.showModal();
 }
 buttonClose.onclick = function (){
-
     modal.close();
 }
 
@@ -239,6 +123,7 @@ let images = [
     "Imagens/produto13.png", 
     "Imagens/produto14.png"
 ];
+
 let currentIndex = 0;
 let intervalTime = 5000;
 let bannerImage = document.getElementById('banner-image');
