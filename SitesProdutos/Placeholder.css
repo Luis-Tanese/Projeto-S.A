@@ -1,0 +1,260 @@
+body {
+    background-color: #FFFFFF;
+    animation: gradiente 1s ease infinite;
+    size: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    animation: gradiente 1s ease infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav img.Logo {
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 10px;
+}
+
+nav ul li a img {
+    transition: top ease 0.5s;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 700px;
+
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus, .input:hover {
+    border-color: rgba(42, 74, 255, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(76, 81, 234, 0.1);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+    color: #333;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.main-image {
+    margin-right: 20px;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* Tudo acima apenas copiei e colei, algumas estão extras, mas não sei quais são essas linhas, o de baixo vai ser somente sobre a tela de compras... */
+
+
+.voltar-tela-inicial{
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border: #9e9ea7;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ebebeb;
+    margin-bottom: 35px;
+    margin-top: 25px;   
+    margin-left: 60px; 
+}
+
+.flex-container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.voltar-tela-inicial:hover{
+    background-color: #dadae0;
+    cursor: pointer;
+}
+
+.alinhas-flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.notas{
+    height: 20px;
+    margin-top: -30px;
+}
+
+.avaliacao-adicionarCarrinho{
+    margin-left: 80px;
+    margin-bottom: solid black;
+}
+
+.produto1{
+    height: 600px;
+    margin-left: 45px;
+}
+
+.outros-produtos1{
+    height: 80px;
+    width: 150px;
+
+}
+
+
+.descricao{
+    margin-left: 50px;
+
+}
+
+#Descricao{
+    margin-top: 5%;
+
+}
+
+.outros-produtos{
+    
+    margin-left: 16%;
+    border-top: solid black;
+    padding-top: 2%;
+}
+
+.Adicionar-Carrinho {
+    width: 400px;
+    height: 90px;
+    border: #9e9ea7;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #7997da;
+    color: white;
+    font-size: xx-large;
+}
+
+.Adicionar-Carrinho:hover{
+    background-color: #6464bd;
+    cursor: pointer;
+}
+
+.outros-produtinhos {
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.nome-produto{
+    font-size: 46px;
+}
+
+p {
+    width: 20cm;
+    margin-top: -10px;
+}
+
+.p1{
+    width: 260px;
+    margin-top: 0.5px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.p2 {
+    width: 260px;
+    margin-left: 15px;
+    margin-top: -8px;
+    
+}
+
+h3 {
+    font-size: 40px;
+    margin-top: -3%;
+}
+
+h1{
+    margin-top: -2px;
+}
+
+.valor-original-produto{
+    font-size: x-large;
+    margin-left: 2%;
+}
+
+.desconto{
+    font-size: x-large;
+    padding: 0.7%;
+    border-radius: 15px;
+    background-color: rgb(93, 176, 253);
+    color: white;
+}
+
+.sobre-desconto{
+    display: flex;
+    margin-top: 70%;
+}
+
+
+
+.imagem-produto-central{
+    background-color: grey;
+    width: 60%;
+    height: 60%;
+    margin-left: 3%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
