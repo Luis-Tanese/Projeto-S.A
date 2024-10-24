@@ -41,3 +41,7 @@ if (botaoCarrinho) {
 } else {
     console.error("Erro: Botão 'Adicionar ao Carrinho' não encontrado.");
 }
+
+function voltar() {
+    window.location.href = "https://arcadestop.netlify.app/";
+}
