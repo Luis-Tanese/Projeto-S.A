@@ -18,7 +18,6 @@ function adicionarProduto(produto) {
                 <img src="${produto.imagem}" alt="${produto.nome}" width="100">
                 <div class="produto-info">
                     <h3>${produto.nome}</h3>
-                    <p>${produto.descricao}</p>
                     <p class="preco">
                         <span class="balao-desconto">${produto.desconto}%</span>
                         <span class="preco-original">R$ ${produto.precoOriginal}</span>
@@ -58,3 +57,8 @@ document.getElementById('form-produto').addEventListener('submit', function (e) 
 });
 
 carregarProdutosRecentes();
+
+
+function voltar(){
+    window.location.href = "https://arcadestop.netlify.app/";
+}
