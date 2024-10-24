@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Formulário de Venda</title>
+</head>
+<body>
+
+    <button class="botao-return">Voltar as compras</button>
+
+    <div class="container">
+        <div class="conjunto-vender">
+            <form class="formulario-de-venda" id="form-produto">
+    
+                <h1>Vender Periférico</h1>
+
+                <div class="venda-container">
+                    <div class="lado-esquerdo">
+                        <label>
+                            Nome do produto:
+                            <input required type="text" placeholder="Nome do produto" class="input-grande" id="nome">
+                        </label>
+
+                        <label>
+                            Descrição do produto:
+                            <textarea required placeholder="Descrição do produto" class="input-grande2" id="descricao"></textarea>
+                        </label>
+
+                        <div class="input-lado-a-lado">
+                            <label>
+                                Valor:
+                                <input required type="number" placeholder="Valor do produto" class="input-menor" id="preco">
+                            </label>
+                        
+                            <label>
+                                Desconto:
+                                <input required type="number" placeholder="Desconto em %" class="input-menor" id="desconto">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="lado-direito">
+                        <div class="onde-ficara-imagem">
+                            <span>Imagem ficará aqui</span>
+                        </div>
+
+                        <label>
+                            <input type="text" placeholder="Adicione a url" class="URL-da-imagem" id="imagem">
+                        </label>
+
+                        <button class="botao-a-venda" id="submit">Colocar à venda</button>
+                    </div>
+                </div>
+    
+            </form>
+            <div class="container2" id="produtos-recentes"></div>
+            
+
+        </div>
+        
+
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
