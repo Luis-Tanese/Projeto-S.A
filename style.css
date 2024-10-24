@@ -288,8 +288,7 @@ h2 {
     background-color: rgb(133, 131, 131);
 }
 
-#modalCarrinho{
-
+#modalCarrinho {
     background-color: rgb(204, 204, 204);
     width: 30%;
     height: 100%;
@@ -299,114 +298,100 @@ h2 {
     top: 21.3%;
 }
 
-#modalCarrinho::backdrop{
-
+#modalCarrinho::backdrop {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.tituloCarrinho{
-
+.tituloCarrinho {
     text-align: center;
     font-size: 40px;
     border-bottom: 2px solid;
     padding-bottom: 15px;
 }
 
-#fecharCarrinho{
-
+#fecharCarrinho {
     background-color: black;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
     color: white;
     border: none;
     border-radius: 20px;
-    
     width: 40px;
     height: 40px;
-
     transition: transform 0.5s;
     transform: translateX(0) scale(0.95);
-
 }
 
-#fecharCarrinho:hover{
-
+#fecharCarrinho:hover {
     cursor: pointer;
     transform: translateX(0) scale(1.05);
 }
 
-.produtosCarrinhoModal1, .produtosCarrinhoModal2, .produtosCarrinhoModal3, .produtosCarrinhoModal4, .produtosCarrinhoModal5, .produtosCarrinhoModal6{
+.conteiner3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    height: 52%;
+    overflow-y: auto;
+}
 
+.produto-item1 {
     background-color: white;
-    display: inline-block;
-    width: 23%;
-    height: 20%;
-    margin-left: 7.5%;
-    margin-top: 3%;
-    margin-bottom: -6%;
+    border-radius: 15px;
+    flex-basis: calc(33.33% - 10px);
+    margin-bottom: 15px;
 }
 
-#produto1c, #produto2c, #produto3c, #produto4c, #produto5c, #produto6c {
+.produto-item1 img {
+    width: 100%;
+}
 
-    display: inline-block;
+.produto-item1 .produto-info {
+
     text-align: center;
-
-    width: 23%;
-    height: 20%;
-
 }
 
-#produto1c{
+.produto-item1 .produto-info h3{
 
-    margin-left: 7.5%;
+    border-bottom: solid black 2px;
+    margin-left: 15%;
+    width: 70%;
 }
 
-#produto2c{
-
-    margin-left: 8.1%;
+.botao-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-#produto3c{
-
-    margin-left: 8.2%;
-}
-
-#produto4c{
-
-    margin-left: 7.5%;
-}
-
-#produto5c{
-
-    margin-left: 8.1%;
-}
-
-#produto6c{
-
-    margin-left: 8.2%;
-}
-
-#comprarCarrinho{
-
+#comprarCarrinho {
     background-color: #357de9;
     color: white;
     font-size: 27px;
     border: none;
     border-radius: 15px;
-
-    position: absolute;
-    left: 33%;
-    top: 77%;
     width: 35%;
     height: 7%;
-
     transition: transform 0.5s;
     transform: translateX(0) scale(0.95);
 }
 
-#comprarCarrinho:hover{
-
+#comprarCarrinho:hover {
     cursor: pointer;
     background-color: rgb(93, 176, 253);
     transform: translateX(0) scale(1.05);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(133, 131, 131);
+    border-radius: 10px;
 }
