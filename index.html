@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
     <title>ArcadeStop</title>
 </head>
 <body>
     <div class="barra-de-cima">
         <nav>
-            <img src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+            <img onclick="voltar()" src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
             <ul>
                 <li>
                     <div class="group">
@@ -87,60 +87,7 @@
         <dialog id="modalCarrinho">
             <button id="fecharCarrinho"><strong>X</strong></button>
             <h1 class="tituloCarrinho">Suas compras</h1>
-            
-            <div class="conteiner3">
-                <div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                    <div class="produto-info">
-                        <h3>xbox</h3>
-                        <p class="preco">
-                            <div class="preco-desconto">R$ 1999.90</div>
-                        </p>
-                    </div>
-                </div>
-                <div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div>
-                <div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div>
-                <div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div>
-                <div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div>
-                <div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div>
-                <div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div><div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div><div class="produto-item1">
-                    <div class="imagem-produto">
-                        <img src="imagens/produto15.png" alt="" class="imagen1">
-                    </div>
-                </div>
-                
-            </div>
-
+            <div class="conteiner3" id="conteiner3"></div>
             <div class="botao-container">
                 <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
             </div>
@@ -150,6 +97,6 @@
         oi
     </footer>
 </body>
-<script src="script.js"></script>
+<script src="index.js"></script>
 </html>
 

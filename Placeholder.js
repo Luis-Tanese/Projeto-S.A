@@ -45,3 +45,38 @@ if (botaoCarrinho) {
 function voltar() {
     window.location.href = "https://arcadestop.netlify.app/";
 }
+
+let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+function abrirCarrinho() {
+    produtosCarrinho.forEach(item => adicionarCarrinho(item));
+}
+
+function adicionarCarrinho(item) {
+    const container = document.getElementById("conteiner3");
+    const produtoHTML = `
+    <div class="produto-item1">
+        <div class="imagem-produto">
+            <img src="../${item.imagem}" alt="" class="imagen1">
+        </div>
+        <div class="produto-info">
+            <h3>${item.nome}</h3>
+            <p class="preco">
+                <div class="preco-desconto">R$ ${item.precoComDesconto}</div>
+            </p>
+        </div>
+    </div>
+    `;
+    container.innerHTML += produtoHTML;
+}
+
+const modalC = document.getElementById("modalCarrinho");
+const fecharC = document.getElementById("fecharCarrinho");
+
+function abrirCarrin() {
+    modalC.showModal();
+    abrirCarrinho()
+}
+fecharC.onclick = function () {
+    modalC.close();
+};

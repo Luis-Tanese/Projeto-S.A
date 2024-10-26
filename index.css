@@ -1,6 +1,12 @@
+* {
+    font-family: 'Oswald', sans-serif;
+}
+
 body {
     background-color: #FFFFFF;
-    size: 100%;
+    animation: gradiente 1s ease infinite;
+    overflow-x: hidden;
+    margin: 0;
 }
 
 /* Barra de cima começa aqui */
@@ -96,194 +102,184 @@ h2 {
     margin-left: 10%;
 }
 
-.banner {
+.categorias {
+    background-color: #d4d4d6;
+    margin: 40px 0;
+    padding: 20px 0;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carrossel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3%;
+    position: relative;
+    padding: 10px 0;
 }
 
-.main-image {
-    margin-right: 20px;
+.produtos-lista {
+    display: flex;
+    overflow-x: auto;
+    width: 80%;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin: 0 auto;
+    max-width: calc(100vw - 40px);
 }
 
-.thumbnails {
+.produtos-lista::-webkit-scrollbar {
+    display: none;
+}
+
+.produto-item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.produto-item .preco-original {
+    text-decoration: line-through;
+}
+
+.balao-desconto {
+    border-radius: 5px;
+    background-color: rgb(93, 176, 253);
+}
+
+.produto-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.produto-item:hover {
+    transform: scale(1.05);
+}
+
+.prevBtn, .nextBtn {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prevBtn {
+    left: 100px;
+}
+
+.nextBtn {
+    right: 100px;
+}
+
+.black-banner {
+    background-image: url("https://img.freepik.com/vetores-gratis/fundo-gradiente-preto-com-cubos_52683-76469.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 120px 0 auto;
+    top: 0;
+    z-index: 1;
 }
 
-/* Tudo acima apenas copiei e colei, algumas estão extras, mas não sei quais são essas linhas, o de baixo vai ser somente sobre a tela de compras... */
-
-.voltar-tela-inicial{
-    width: 140px;
-    height: 40px;
-    border-radius: 10px;
-    border: #9e9ea7;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    background-color: #ebebeb;
-    margin-bottom: 35px;
-    margin-top: 25px;   
-    margin-left: 60px; 
-}
-
-.flex-container{
+.banner-content {
     display: flex;
-    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
 }
 
-.voltar-tela-inicial:hover{
-    background-color: #dadae0;
-    cursor: pointer;
+.text-section {
+    max-width: 50%;
 }
 
-.alinhas-flex{
-    display: flex;
-    flex-direction: row;
-}
-
-.notas{
-    height: 20px;
-    margin-top: -30px;
-}
-
-.avaliacao-adicionarCarrinho{
-    margin-left: 80px;
-    margin-bottom: solid black;
-}
-
-.produto1{
-    height: 600px;
-    margin-left: 45px;
-}
-
-.outros-produtos1{
-    height: 80px;
-    width: 150px;
-
-}
-
-.descricao{
-    margin-left: 50px;
-
-}
-
-#Descricao{
-    margin-top: 5%;
-
-}
-
-.outros-produtos{
-    
-    margin-left: 16%;
-    border-top: solid black;
-    padding-top: 2%;
-}
-
-.Adicionar-Carrinho {
-    width: 400px;
-    height: 90px;
-    border: #9e9ea7;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    background-color: #7997da;
-    color: white;
-    font-size: xx-large;
-}
-
-.Adicionar-Carrinho:hover{
-    background-color: #6464bd;
-    cursor: pointer;
-}
-
-.outros-produtinhos {
-    display: flex;
-    background-color: rgb(245, 245, 245);
+.text-section h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
     margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 1.2rem;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.buttons-section {
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
-.nome-produto{
-    font-size: 46px;
-}
-
-p {
-    width: 20cm;
-    margin-top: -10px;
-}
-
-.p1{
-    width: 260px;
-    margin-top: 0.5px;
-    margin-left: 20px;
-    font-weight: bold;
-}
-
-.p2 {
-    width: 260px;
-    margin-left: 15px;
-    margin-top: -8px;
-    
-}
-
-h3 {
-    font-size: 40px;
-    margin-top: -3%;
-}
-
-h1{
-    margin-top: -2px;
-}
-
-.valor-original-produto{
-    font-size: x-large;
-    margin-left: 2%;
-}
-
-.desconto{
-    font-size: x-large;
-    padding: 0.7%;
-    border-radius: 15px;
-    background-color: rgb(93, 176, 253);
-    color: white;
-}
-
-.sobre-desconto{
-    display: flex;
-    margin-top: 70%;
-}
-
-.imagem-produto-central{
-    background-color: grey;
-    width: 60%;
-    height: 60%;
-    margin-left: 3%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.voltar-tela-inicial {
-    width: 160px;
-    height: 40px;
+.banner-btn {
+    background-color: rgba(42, 74, 255, 0.4);
     border-radius: 10px;
-    background-color: #357de9;
-    color: #FFFFFF;
-    font-size: 1rem;
-    text-align: center;
-    line-height: 40px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    margin: 120px 0 20px 20px;
     cursor: pointer;
-    border: none;
+    position: relative;
+    overflow: hidden;
+    width: 120px;
+    height: 10px;
+    margin: 0 10px;
+    text-align: center;
 }
 
-.voltar-tela-inicial:hover {
-    background-color: #275cb8;
+.banner-btn:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 92, 253, 0.805);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 5s linear;
 }
 
-/* Carrinho */
+.banner-btn.active:after {
+    transform: scaleX(1);
+}
+
+#modalEsgotado{
+
+    width: 450px;
+    border-radius: 5px;
+}
+
+#modalEsgotado::backdrop{
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.textModal{
+
+    font-size: 20px;
+}
 
 #fecharModal{
+
     float: right;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: gainsboro;
