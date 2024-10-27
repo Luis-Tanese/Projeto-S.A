@@ -257,35 +257,38 @@ function voltar() {
 
 let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-function abrirCarrinho() {
-    produtosCarrinho.forEach(item => adicionarCarrinho(item));
+function abrirCarrin() {
+    const container = document.getElementById("conteiner3");
+    modalCarrinho.showModal();
+    container.innerHTML = '';
+    produtosCarrinho.forEach((item, index) => adicionarCarrinho(item, index));
 }
 
-function adicionarCarrinho(item) {
+function adicionarCarrinho(item, index) {
     const container = document.getElementById("conteiner3");
     const produtoHTML = `
-    <div class="produto-item1">
+    <div class="produto-item1" data-index="${index}">
         <div class="imagem-produto">
-            <img src="${item.imagem}" alt="" class="imagen1">
+            <img src="${item.imagem}" alt="Imagem do produto" class="imagen1" onerror="this.onerror=null; this.src='default.jpg';"> 
         </div>
         <div class="produto-info">
             <h3>${item.nome}</h3>
             <p class="preco">
                 <div class="preco-desconto">R$ ${item.precoComDesconto}</div>
             </p>
+            <button class="botao-remover-carrinho" onclick="removerProdutoCarrinho(${index})">Remover</button>
         </div>
     </div>
     `;
     container.innerHTML += produtoHTML;
 }
 
-const modalC = document.getElementById("modalCarrinho");
-const fecharC = document.getElementById("fecharCarrinho");
-
-function abrirCarrin() {
-    modalC.showModal();
-    abrirCarrinho()
+function removerProdutoCarrinho(index) {
+    produtosCarrinho.splice(index, 1);
+    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho));
+    modalCarrinho.close();
 }
-fecharC.onclick = function () {
-    modalC.close();
+
+document.getElementById("fecharCarrinho").onclick = function () {
+    modalCarrinho.close();
 };

@@ -343,26 +343,57 @@ h2 {
 }
 
 .produto-item1 {
+    cursor: pointer;
     background-color: white;
     border-radius: 15px;
     flex-basis: calc(33.33% - 10px);
-    margin-bottom: 15px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .produto-item1 img {
     width: 100%;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
 }
 
 .produto-item1 .produto-info {
-
+    width: 100%;
     text-align: center;
 }
 
-.produto-item1 .produto-info h3{
+.produto-item1 .produto-info h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
 
-    border-bottom: solid black 2px;
-    margin-left: 15%;
-    width: 70%;
+.produto-item1 .botao-remover-carrinho {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.produto-item1 .botao-remover-carrinho:hover {
+    background-color: #d32f2f;
 }
 
 .botao-container {
@@ -400,4 +431,81 @@ h2 {
 ::-webkit-scrollbar-thumb{
     background-color: rgb(133, 131, 131);
     border-radius: 10px;
+}
+
+footer{
+    text-align: center;
+    align-items: center;
+    color: white;
+    column-count: 4;
+     background-color: #000;
+    height: 240px;
+}
+
+.TextoFooter{
+    padding-top: 50px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.TextoFooter1{
+    padding-top: 35px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#footer_list li h3 {
+    font-family: "Inter", sans-serif, italic;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+#footer_list{
+    list-style: none;
+}
+
+#footer_contacts{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.social img{
+    display: flex;
+    margin: 0;
+    margin-top: 10%;
+    margin-left: 18%;
+    width: 25px;
+    height: 25px;
+}
+
+#textoMarca{
+   margin-top: -10%;
+   
+}
+.caixa1 h3 {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.caixa2 h3 {
+    text-align: left;
+
+}
+
+.caixa3 h3 {
+    text-align: left;
+    margin-left: 50px;
+}
+
+.social h3 {
+    text-align: left;
+    margin-left: 70px;
+}
+
+h3:hover{
+    cursor: pointer;
+    color: #357de9;
+    
 }

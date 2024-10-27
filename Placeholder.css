@@ -283,21 +283,6 @@ h1{
 
 /* Carrinho */
 
-#fecharModal{
-    float: right;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: gainsboro;
-    border: none;
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-#fecharModal:hover{
-    background-color: rgb(133, 131, 131);
-}
-
 #modalCarrinho {
     background-color: rgb(204, 204, 204);
     width: 30%;
@@ -347,26 +332,57 @@ h1{
 }
 
 .produto-item1 {
+    cursor: pointer;
     background-color: white;
     border-radius: 15px;
     flex-basis: calc(33.33% - 10px);
-    margin-bottom: 15px;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .produto-item1 img {
     width: 100%;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
 }
 
 .produto-item1 .produto-info {
-
+    width: 100%;
     text-align: center;
 }
 
-.produto-item1 .produto-info h3{
+.produto-item1 .produto-info h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    margin: 10px 0;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
 
-    border-bottom: solid black 2px;
-    margin-left: 15%;
-    width: 70%;
+.produto-item1 .botao-remover-carrinho {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.produto-item1 .botao-remover-carrinho:hover {
+    background-color: #d32f2f;
 }
 
 .botao-container {
