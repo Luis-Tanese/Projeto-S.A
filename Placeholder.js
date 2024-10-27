@@ -5,15 +5,19 @@ function adicionarAoCarrinho() {
     const precoComDescontoEl = document.querySelector('.preco-com-desconto');
     if (nomeProdutoEl && precoOriginalEl && descontoEl && precoComDescontoEl) {
         const nomeProduto = nomeProdutoEl.innerText.replace(/\s+/g, '-');
-        const precoOriginal = precoOriginalEl.innerText.replace('R$: ', '').trim();
-        const desconto = descontoEl.innerText.replace('%', '').trim();
-        const precoComDesconto = precoComDescontoEl.innerText.replace('R$: ', '').trim();
+        const precoOriginal = precoOriginalEl.innerText.replace('R$ ', '').trim();
+        const desconto = descontoEl.innerText.replace('% OFF', '').trim();
+        const precoComDesconto = precoComDescontoEl.innerText.replace('R$ ', '').trim();
         const imagemEl = document.getElementsByClassName("imagem-produto-central");
-        var caminho = "";
-        for (var i = 0; i < imagemEl.length; i++) {
-            var imgTag = imagemEl[i].getElementsByTagName('img')[0];
-            var srcLink = imgTag.src;
-            caminho = srcLink.split('/').slice(-2).join('/');
+        let caminho = "";
+        for (let i = 0; i < imagemEl.length; i++) {
+            const imgTag = imagemEl[i].getElementsByTagName('img')[0];
+            const srcLink = imgTag.src;
+            if (srcLink.startsWith('http://') || srcLink.startsWith('https://')) {
+                caminho = srcLink;
+            } else {
+                caminho = srcLink.split('/').slice(-2).join('/');
+            }
         }
         const produto = {
             nome: nomeProduto,
@@ -35,6 +39,7 @@ function adicionarAoCarrinho() {
         console.error("Erro: Elementos do produto não encontrados.");
     }
 }
+
 const botaoCarrinho = document.querySelector('.Adicionar-Carrinho');
 if (botaoCarrinho) {
     botaoCarrinho.addEventListener('click', adicionarAoCarrinho);
@@ -48,35 +53,38 @@ function voltar() {
 
 let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-function abrirCarrinho() {
-    produtosCarrinho.forEach(item => adicionarCarrinho(item));
+function abrirCarrin() {
+    const container = document.getElementById("conteiner3");
+    modalCarrinho.showModal();
+    container.innerHTML = '';
+    produtosCarrinho.forEach((item, index) => adicionarCarrinho(item, index));
 }
 
-function adicionarCarrinho(item) {
+function adicionarCarrinho(item, index) {
     const container = document.getElementById("conteiner3");
     const produtoHTML = `
-    <div class="produto-item1">
+    <div class="produto-item1" data-index="${index}">
         <div class="imagem-produto">
-            <img src="../${item.imagem}" alt="" class="imagen1">
+            <img src="${item.imagem}" alt="Imagem do produto" class="imagen1" onerror="this.onerror=null; this.src='default.jpg';"> 
         </div>
         <div class="produto-info">
             <h3>${item.nome}</h3>
             <p class="preco">
                 <div class="preco-desconto">R$ ${item.precoComDesconto}</div>
             </p>
+            <button class="botao-remover-carrinho" onclick="removerProdutoCarrinho(${index})">Remover</button>
         </div>
     </div>
     `;
     container.innerHTML += produtoHTML;
 }
 
-const modalC = document.getElementById("modalCarrinho");
-const fecharC = document.getElementById("fecharCarrinho");
-
-function abrirCarrin() {
-    modalC.showModal();
-    abrirCarrinho()
+function removerProdutoCarrinho(index) {
+    produtosCarrinho.splice(index, 1);
+    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho));
+    modalCarrinho.close();
 }
-fecharC.onclick = function () {
-    modalC.close();
+
+document.getElementById("fecharCarrinho").onclick = function () {
+    modalCarrinho.close();
 };
