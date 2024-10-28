@@ -159,14 +159,12 @@ ul{
     justify-content: center;
     margin-top: 3%;
     margin-right: 3%;
-
+    cursor: pointer;
     border-radius: 15px;
     background-color: rgb(218, 218, 218);
     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
-
     width: 15%;
     padding: 1%;
-
     flex-basis: calc(18% - 3%);
 }
 
