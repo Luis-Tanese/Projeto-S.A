@@ -11,7 +11,7 @@
 <body>
     <div class="barra-de-cima">
         <nav>
-            <img onclick="voltar()" src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+            <img id="imagem-logo" src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
             <ul>
                 <li>
                     <div class="group">
@@ -92,6 +92,16 @@
                 <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
             </div>
         </dialog>
+    </div>
+    <div id="loginModal" class="modal2">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button id="loginButton">Login</button>
+            <p id="error" style="color: red;"></p>
+        </div>
     </div>
     <footer>
         <div id="footer_cotent">
