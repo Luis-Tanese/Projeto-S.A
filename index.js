@@ -292,3 +292,38 @@ function removerProdutoCarrinho(index) {
 document.getElementById("fecharCarrinho").onclick = function () {
     modalCarrinho.close();
 };
+
+const logo = document.getElementById("imagem-logo");
+let clickCount = 0;
+
+const EMAIL_VALIDO = "admin@arcadestop.com";
+const SENHA_VALIDO = "adminarcadestop";
+
+logo.addEventListener("click", () => {
+    clickCount++;
+    if (clickCount === 10) {
+        document.getElementById("loginModal").style.display = "block";
+    }
+});
+
+document.getElementById("closeModal").onclick = function() {
+    document.getElementById("loginModal").style.display = "none";
+};
+
+document.getElementById("loginButton").onclick = function() {
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+    
+    if (email === EMAIL_VALIDO && senha === SENHA_VALIDO) {
+        window.location.href = "admin.html";
+    } else {
+        document.getElementById("error").textContent = "Email ou senha inválidos.";
+    }
+};
+
+window.onclick = function(event) {
+    const modal2 = document.getElementById("loginModal");
+    if (event.target === modal) {
+        modal2.style.display = "none";
+    }
+};
