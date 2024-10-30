@@ -160,32 +160,30 @@ function abrirProduto(nomeProduto) {
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="Placeholder.css">
+            <link rel="stylesheet" href="../Placeholder.css">
             <title>${produto.nome}</title>
         </head>
         <body>
             <div class="barra-de-cima">
                 <nav>
-                    <img onclick="voltar()" src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+                    <img onclick="voltar()" src="../Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
                     <ul>
                         <li>
                             <div class="group">
-                                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                                    <g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g>
+                                </svg>
                                 <input placeholder="Procure aqui..." type="search" class="input">
                             </div>
                         </li>
-                        <li>
-                            <a id="login" href="/login.html"><img src="Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a>
-                        </li>
-                        <li>
-                            <a id="carrinho" onclick="abrirCarrin()" target="_blank"><img src="Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a>
-                        </li>
+                        <li><a id="login" href="/login.html"><img src="../Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a></li>
+                        <li><a id="carrinho" onclick="abrirCarrin()" target="_blank"><img src="../Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a></li>
                     </ul>
                 </nav>
             </div>
-            <br>
-            <a href="index.html">Voltar ás compras </a>
-            <br>
+            
+            <button class="voltar-tela-inicial" onclick="voltar()">Voltar às compras</button>
+            
             <div class="flex-container">
                 <div class="imagem-produto-central">
                     <img class="produto1" src="${produto.imagem}" alt="${produto.nome}">
@@ -199,51 +197,49 @@ function abrirProduto(nomeProduto) {
                         <img class="notas" src="../Imagens/Design sem nome.png" alt="">
                     </div>
                     <div class="sobre-desconto">
-                        <h3 class="desconto">${produto.desconto}%</h3>
-                        <h3 class="valor-original-produto">R$: ${produto.precoOriginal}</h3>
+                        <h3 class="desconto">${produto.desconto}% OFF</h3>
+                        <h3 class="valor-original-produto">R$ ${produto.precoOriginal}</h3>
                     </div>
-                    <h3 class="preco-com-desconto">R$: ${calcularPrecoComDesconto(produto.precoOriginal, produto.desconto)}</h3>
+                    <h3 class="preco-com-desconto">R$ ${calcularPrecoComDesconto(produto.precoOriginal, produto.desconto)}</h3>
                     <button class="Adicionar-Carrinho">Adicionar ao Carrinho</button>
                 </div>
+
                 <div class="descricao">
                     <h1 id="Descricao">Descrição:</h1>
-                    <br>
                     <p>${produto.descricao}</p>
                 </div>
+
                 <div class="outros-produtos">
                     <h1 class="titulo-outro-produto">Outros produtos:</h1>
                     <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
+                        <img class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="Produto">
                         <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
+                            <p class="p1">Produto: Mouse Gamer</p>
+                            <p class="p2">Descrição breve do produto...</p>
                         </div>
                     </div>
                     <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
+                        <img class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="Produto">
                         <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
-                        </div>
-                    </div>
-                    <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
-                        </div>
-                    </div>
-                    <div class="outros-produtinhos">
-                        <img  class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">outro produto:</p>
-                            <p class="p2">asd asdasd asdasd asdasd asd asdasdasdasd asdasdasdasd asdasd adsadasdas dasda sad asdasdasd!</p>
+                            <p class="p1">Produto: Teclado Mecânico</p>
+                            <p class="p2">Descrição breve do produto...</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="carrinhoModal">
+                    <dialog id="modalCarrinho">
+                        <button id="fecharCarrinho"><strong>X</strong></button>
+                        <h1 class="tituloCarrinho">Suas compras</h1>
+                        <div class="conteiner3" id="conteiner3"></div>
+                        <div class="botao-container">
+                            <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
+                        </div>
+                    </dialog>
+                </div>
             </div>
         </body>
-        <script src="Placeholder.js"></script>
+        <script src="../Placeholder.js"></script>
         </html>
         `;
         novaPagina.document.write(paginaProduto);
