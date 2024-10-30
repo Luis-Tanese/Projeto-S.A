@@ -148,7 +148,7 @@ h2 {
 }
 
 .avaliacao-adicionarCarrinho{
-    margin-left: 80px;
+    margin-left: 1.5%;
     margin-bottom: solid black;
 }
 
@@ -170,12 +170,14 @@ h2 {
 
 #Descricao{
     margin-top: 5%;
+    margin-left: 1%;
 
 }
 
 .outros-produtos{
     
-    margin-left: 16%;
+    margin-left: 21%;
+    margin-top: 2%;
     border-top: solid black;
     padding-top: 2%;
 }
@@ -209,6 +211,7 @@ h2 {
 p {
     width: 20cm;
     margin-top: -10px;
+    margin-left: 1%;
 }
 
 .p1{
@@ -249,7 +252,7 @@ h1{
 
 .sobre-desconto{
     display: flex;
-    margin-top: 70%;
+    margin-top: 50%;
 }
 
 .imagem-produto-central{
