@@ -39,13 +39,15 @@ function adicionarProduto(produto, index) {
             </div>
         </div>
     `;
-    container.innerHTML += produtoHTML;
+    container.insertAdjacentHTML('beforeend', produtoHTML);
     document.querySelector(`[data-index="${index}"]`).addEventListener('click', function () {
         abrirModal(index);
     });
 }
 
 function carregarProdutosRecentes() {
+    const container = document.getElementById('produtos-recentes');
+    container.innerHTML = '';
     produtosRecentes.forEach((produto, index) => adicionarProduto(produto, index));
 }
 
@@ -74,8 +76,7 @@ function removerProduto() {
     if (produtoSelecionado !== null) {
         produtosRecentes.splice(produtoSelecionado, 1);
         localStorage.setItem('produtosRecentesStorage', JSON.stringify(produtosRecentes));
-        document.getElementById('produtos-recentes').innerHTML = '';
-        carregarProdutosRecentes();
+        carregarProdutosRecentes(); // Recarrega a lista de produtos para refletir a remoção
         fecharModal();
     }
 }
