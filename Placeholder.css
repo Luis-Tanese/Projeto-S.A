@@ -154,6 +154,7 @@ h2 {
 
 .produto1{
     height: 600px;
+    width: 600px;
     margin-left: 45px;
 }
 
@@ -257,7 +258,7 @@ h1{
 
 .imagem-produto-central{
     background-color: grey;
-    width: 60%;
+    width: 57%;
     height: 60%;
     margin-left: 3%;
     align-items: center;
