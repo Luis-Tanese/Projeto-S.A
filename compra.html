@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras ArcadeStop</title>
+    <link rel="stylesheet" href="compra.css">
+</head>
+<body>
+    <div class="barra-de-cima">
+        <nav>
+            <img id="imagem-logo" src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+            <ul>
+                <li>
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                        <input placeholder="Procure aqui..." type="search" class="input">
+                    </div>
+                </li>
+                <li>
+                    <a id="login" href="/login.html"><img src="Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a>
+                </li>
+                <li>
+                    <a id="carrinho" onclick="abrirCarrin()" target="_blank"><img src="Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="shopping-container">
+        <div class="items-section">
+            <h2>Items</h2>
+            <p>Quantidade: <span>1 item(s)</span></p>
+            <div class="item-container" id="item-container">
+                <div class="item">
+                    <img src="https://i1.sndcdn.com/artworks-zyYqA8D0BdfuyH28-WeeHrw-t1080x1080.jpg" alt="Imagem do Produto">
+                    <div class="item-info">
+                        <h3>Jogo Red Dead Redemption II para ps4 (lacrado)</h3>
+                        <p><strong>R$:</strong> 77,70</p>
+                        <div class="quantity-section">
+                            <label for="quantity">Quantidade:</label>
+                            <select id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </div>
+                        <button>Salvar para depois</button>
+                        <button>Excluir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="warranty-section">
+                <p>Adicionar garantia ao(s) produto(s)?</p>
+                <label><input type="radio" name="warranty" value="sem-garantia" checked> Sem garantia - R$ 0,00</label>
+                <label><input type="radio" name="warranty" value="30-dias"> 30 dias - R$ 12,90</label>
+                <label><input type="radio" name="warranty" value="1-ano"> 1 ano - R$ 39,90</label>
+            </div>
+        </div>
+        <div class="total-section">
+            <h2>Total</h2>
+            <p>Itens (1 item): <span>R$ 77,70</span></p>
+            <p>Garantia: <span>R$ 0,00</span></p>
+            <p>Taxa de entrega: <span>R$ 23,60</span></p>
+            <hr>
+            <p><strong>Total geral: R$ 101,30</strong></p>
+            <div class="payment-section">
+                <p>Adicionar outra forma de pagamento</p>
+                <form>
+                    <input type="text" placeholder="Número do cartão" required>
+                    <input type="text" placeholder="Nome do cartão" required>
+                    <input type="text" placeholder="MM / AA" required>
+                    <input type="text" placeholder="Código de segurança" required>
+                    <button type="submit">Comprar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="compra.js"></script>
+</html>
