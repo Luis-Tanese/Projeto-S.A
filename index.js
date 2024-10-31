@@ -15,7 +15,7 @@ const produtosBest = [
 produtosBest.forEach(produto => adicionarProduto("best-sellers", produto));
 
 const produtosPerifericos = [
-    { nome: "Produto 7", precoOriginal: 300, precoDesconto: 200, imagem: "Imagens/produto7.png", desconto: 33 },
+    { nome: "Controle Powera Wired Super Mario Bros", precoOriginal: 300, precoDesconto: 200, imagem: "Imagens/produto7.png", desconto: 33 },
     { nome: "Headset Fone de Ouvido Havit", precoOriginal: 189, precoDesconto: 147, imagem: "Imagens/produto18.png", desconto: 14 },
     { nome: "Redragon TECLADO MECANICO GAMER", precoOriginal: 300, precoDesconto: 211, imagem: "Imagens/produto19.png", desconto: 30 },
     { nome: "Teclado Mecânico sem fio Logitech POP", precoOriginal: 799, precoDesconto: 529, imagem: "Imagens/produto20.png", desconto: 34 },
