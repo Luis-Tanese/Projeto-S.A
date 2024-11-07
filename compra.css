@@ -13,7 +13,7 @@ body {
 .barra-de-cima nav {
     display: flex;
     width: 100%;
-    height: 70px; /* Altura definida */
+    height: 70px;
     padding: 10px 0;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +21,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
-    z-index: 1000; /* Ajustado para garantir que fique acima de outros elementos */
+    z-index: 1000;
 }
 
 .barra-de-cima nav img.Logo {
@@ -87,12 +87,14 @@ body {
 #carrinho {
     cursor: pointer;
 }
+
 /* Barra de cima */
 
 .shopping-container {
     display: flex;
     justify-content: center;
     width: 80%;
+    margin-left: 20%;
     max-width: 1200px;
     gap: 20px;
     margin-top: 100px;
