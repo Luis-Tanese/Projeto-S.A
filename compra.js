@@ -1,4 +1,5 @@
 let produtos = JSON.parse(localStorage.getItem("carrinho")) || [];
+let garantiaSelecionada = "sem-garantia";
 
 function carregarProdutos() {
     const container = document.getElementById("item-container");
@@ -7,6 +8,7 @@ function carregarProdutos() {
         container.innerHTML = '<p>O carrinho está vazio.</p>';
     } else {
         produtos.forEach((item, index) => {
+            if (!item.quantidade) item.quantidade = 1;
             const produtoHTML = `
             <div class="item" data-index="${index}">
                 <img src="${item.imagem}" alt="Imagem do Produto" class="imagen1" onerror="this.onerror=null; this.src='default.jpg';">
@@ -28,6 +30,50 @@ function carregarProdutos() {
             container.innerHTML += produtoHTML;
         });
     }
+    atualizarTotal();
+}
+
+function atualizarTotal() {
+    const quantidadeItensEl = document.getElementById("quantidade-itens");
+    const totalItensEl = document.getElementById("total-itens");
+    const precoItensEl = document.getElementById("preco-itens");
+    const precoGarantiaEl = document.getElementById("preco-garantia");
+    const precoEntregaEl = document.getElementById("preco-entrega");
+    const totalGeralEl = document.getElementById("total-geral");
+    let total = 0;
+    let totalProdutos = 0;
+    let totalEntrega = 0;
+    produtos.forEach((item) => {
+        total += item.quantidade * item.precoComDesconto;
+        totalProdutos += item.quantidade;
+        totalEntrega += 23.90 * item.quantidade;
+    });
+    let valorGarantia = calcularValorGarantia(totalProdutos);
+    quantidadeItensEl.innerText = `${totalProdutos} Itens`;
+    totalItensEl.innerText = `${totalProdutos} item(s)`;
+    precoItensEl.innerText = `R$ ${total.toFixed(2)}`;
+    precoGarantiaEl.innerText = `R$ ${valorGarantia.toFixed(2)}`;
+    precoEntregaEl.innerText = `R$ ${totalEntrega.toFixed(2)}`;
+    totalGeralEl.innerText = `Total geral: R$ ${(total + valorGarantia + totalEntrega).toFixed(2)}`;
+}
+
+function calcularValorGarantia(quantidade) {
+    switch (garantiaSelecionada) {
+        case "30-dias":
+            return 12.90 * quantidade;
+        case "1-ano":
+            return 39.90 * quantidade;
+        default:
+            return 0;
+    }
+}
+
+function atualizarQuantidade(index) {
+    const select = document.getElementById(`quantity-${index}`);
+    const quantidade = parseInt(select.value);
+    produtos[index].quantidade = quantidade;
+    localStorage.setItem("carrinho", JSON.stringify(produtos));
+    carregarProdutos();
 }
 
 function removerProduto(index) {
@@ -36,4 +82,24 @@ function removerProduto(index) {
     carregarProdutos();
 }
 
-carregarProdutos();
+function atualizarGarantia() {
+    const radios = document.getElementsByName("warranty");
+    radios.forEach((radio) => {
+        if (radio.checked) {
+            garantiaSelecionada = radio.value;
+        }
+    });
+    atualizarTotal();
+}
+
+function inicializarGarantiaListeners() {
+    const radios = document.getElementsByName("warranty");
+    radios.forEach((radio) => {
+        radio.addEventListener("change", atualizarGarantia);
+    });
+}
+
+window.onload = function () {
+    carregarProdutos();
+    inicializarGarantiaListeners();
+};
