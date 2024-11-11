@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+    <title>ArcadeStop</title>
+</head>
+<body>
+    <div class="barra-de-cima">
+        <nav>
+            <img id="imagem-logo" src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+            <ul>
+                <li>
+                    <div class="group">
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                        <input placeholder="Procure aqui..." type="search" class="input">
+                    </div>
+                </li>
+                <li>
+                    <a id="login" href="/login.html"><img src="Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a>
+                </li>
+                <li>
+                    <a id="carrinho" onclick="abrirCarrin()" target="_blank"><img src="Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="black-banner">
+        <div class="banner-content">
+            <div class="text-section">
+                <h1>Ofertas Exclusivas!!</h1>
+                <p>Não perca essa chance de pegar produtos com DESCONTÕES INSANOS!!!</p>
+            </div>
+            <div class="image-section">
+                <img id="banner-image" src="Imagens/deal-banner1.jpg" alt="Deals" width="400" height="200">
+            </div>
+        </div>
+        <div class="buttons-section">
+            <button class="banner-btn"></button>
+            <button class="banner-btn"></button>
+            <button class="banner-btn"></button>
+        </div>
+    </div>
+    <div class="categorias">
+        <h2>Best Sellers</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('best-sellers', -3)">❮</button>
+            <div id="best-sellers" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('best-sellers', 3)">❯</button>
+        </div>
+    </div>
+    <div class="categorias">
+        <h2>Perifericos</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('perifericos', -3)">❮</button>
+            <div id="perifericos" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('perifericos', 3)">❯</button>
+        </div>
+    </div>    
+    <div class="categorias">
+        <h2>Melhores Video Games</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('mais-vendidos', -3)">❮</button>
+            <div id="mais-vendidos" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('mais-vendidos', 3)">❯</button>
+        </div>
+    </div>
+    <div class="categorias">
+        <h2>Adicionados Recentemente</h2>
+        <div class="carrossel-container">
+            <button class="prevBtn" onclick="moverCarrossel('adicionados-recente', -3)">❮</button>
+            <div id="adicionados-recente" class="produtos-lista"></div>
+            <button class="nextBtn" onclick="moverCarrossel('adicionados-recente', 3)">❯</button>
+        </div>
+    </div>
+    <div class="modal">
+        <dialog id="modalEsgotado">
+            <button id="fecharModal"><strong>X</strong></button>
+            <h1>AVISO!</h1>
+            <p class="textModal"> O produto selecionado está temporariamente sem estoque. Pedimos desculpas pelo inconveniente e agradecemos pela sua compreensão. Fique à vontade para explorar outras opções em nosso site!</p>
+        </dialog>
+    </div>
+    <div class="carrinhoModal">
+        <dialog id="modalCarrinho">
+            <button id="fecharCarrinho"><strong>X</strong></button>
+            <h1 class="tituloCarrinho">Suas compras</h1>
+            <div class="conteiner3" id="conteiner3"></div>
+            <div class="botao-container">
+                <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
+            </div>
+        </dialog>
+    </div>
+    <div id="loginModal" class="modal2">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button id="loginButton">Login</button>
+            <p id="error" style="color: red;"></p>
+        </div>
+    </div>
+    <footer>
+        <div id="footer_cotent">
+            <h1 class="TextoFooter1">Precisa de Ajuda?</h1>
+            <ul id="footer_list">
+                <li>
+                    <div class="caixa1">
+                    <h3>Central de ajuda</h3>
+                    <h3>Perguntas comuns</h3>
+                    <h3>Feedback da loja</h3>
+                </li> 
+                </div>
+                <h1 class="TextoFooter">Política de privacidade</h1>
+            <ul id="footer_list">
+                <li>
+                    <div class="caixa2">
+                    <h3>Privacy Policy</h3>
+                    <h3>Conditions of use</h3>
+                    <h3>Terms & Conditions</h3>
+                </li> 
+                </div>
+                <h1 class="TextoFooter">Sobre nós</h1>
+
+            <ul id="footer_list">
+                <li>
+                    <div class="caixa3">
+                    <h3>Acessibilidade</h3>
+                    <h3>Afiliados</h3>
+                    <h3>Investidores</h3>
+                </li> 
+                </div>
+                <h1 class="TextoFooter">Contatos</h1>
+                <div class="social"> 
+                    <ul id="footer_list">
+                        <li>
+                                <img src="Imagens/Imagens logos de marca/instragem.png.webp" alt="">
+                                <h3 id="textoMarca">Instagram</h3>
+                                <img src="Imagens/Imagens logos de marca/facebook.png.png" alt="">
+                                <h3 id="textoMarca">Facebook</h3>
+                                <img src="Imagens/Imagens logos de marca/email.png.png" alt="">
+                                <h3 id="textoMarca" >E-mail</h3>
+                        </li>
+                </div>
+            </div>
+    </footer>
+</body>
+<script src="index.js"></script>
+</html>
+

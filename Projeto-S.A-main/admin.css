@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #357EEB;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin-top: -7%;
+}
+
+.conjunto-vender {
+    background-color: white;
+    width: 50%;
+    padding: 3% 3% 30% 3%;
+    box-shadow: 4px 6px 16px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-left: 5%;
+
+    
+}
+
+.formulario-de-venda {
+    width: 100%;
+    padding-bottom: 5%;
+    border-bottom: solid black 2px;
+    
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.venda-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lado-esquerdo {
+    width: 60%;
+}
+
+.lado-esquerdo label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.input-grande {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.input-grande2{
+    width: 100%;
+    padding: 10px 10px 120px 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+}
+
+.input-lado-a-lado {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-menor {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.URL-da-imagem{
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-left: -6.5%;
+}
+
+.lado-direito {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.onde-ficara-imagem {
+    width: 70%;
+    height: 80%;
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+.botao-a-venda {
+    background-color: #357EEB;
+    color: white;
+    border: none;
+    width: 70%;
+    height: 30%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 22px;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20%;
+}
+
+.botao-a-venda:hover {
+    background-color: #285bb5;
+}
+
+.botao-return{
+    width: 7%;
+    height: 30px;
+    margin-left: 6%;
+    margin-top:3%;
+
+    background-color: #3362b3;
+    border: none;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.botao-return:hover{
+    background-color: #0e2347;
+}
+
+ul{
+    display: flex;
+}
+
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produto-item{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: rgb(218, 218, 218);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    width: 15%;
+    padding: 1%;
+    flex-basis: calc(18% - 3%);
+}
+
+.balao-desconto{
+    background-color: #5e8cdb;
+    padding: 3%;
+    border-radius: 20px;
+    color: white;
+    
+}
+
+.produto-item img{
+    width: 50%;
+}
+
+/* modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.botao-remover, .botao-cancelar {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.botao-remover {
+    background-color: #f44336;
+    color: white;
+    border-radius: 8px;
+}
+
+.botao-cancelar {
+    background-color: #357EEB;
+    color: white;
+    border-radius: 8px;
+}
+
+.botao-remover:hover {
+    background-color: #d32f2f;
+}
+
+.botao-cancelar:hover {
+    background-color: #285bb5;
+}
+
+#produto-info-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#produto-info-modal img {
+    margin-bottom: 10px;
+}
+
+#produto-info-modal h3 {
+    margin: 0;
+}
