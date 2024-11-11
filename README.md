@@ -31,4 +31,14 @@
   <li><strong>(LocalStorage): </strong>Todos os dados dos usuários devem ser armazenados no LocalStorage do navegador, permitindo que as informações persistam mesmo após o usuário recarregar a página ou fechar o navegador. 
  </li>
  </ul>
- </div>
+ 
+<h1>Equipe:</h1>
+
+<ul>
+ <li>Luis Otavio Rosa Rocha Tanese - Líder</li>
+ <li>Miguel Lucas Costa dos Santos</li>
+ <li>Gabriel Trevisan Ribeiro</li>
+ <li>Fabricio Ereno Kolling</li>
+ <li>João Pedro Brocca dos Santos</li>
+ <li>Brayan Roger Lino Esteban</li>
+</ul>
