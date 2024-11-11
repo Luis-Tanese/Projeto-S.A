@@ -323,3 +323,6 @@ window.onclick = function(event) {
         modal2.style.display = "none";
     }
 };
+function comprarCarrinho(){
+    window.location.href = "https://arcadestop.netlify.app/compra.html"
+}
