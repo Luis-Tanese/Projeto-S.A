@@ -35,7 +35,6 @@ function carregarProdutos() {
 
 function atualizarTotal() {
     const quantidadeItensEl = document.getElementById("quantidade-itens");
-    const totalItensEl = document.getElementById("total-itens");
     const precoItensEl = document.getElementById("preco-itens");
     const precoGarantiaEl = document.getElementById("preco-garantia");
     const precoEntregaEl = document.getElementById("preco-entrega");
@@ -50,7 +49,6 @@ function atualizarTotal() {
     });
     let valorGarantia = calcularValorGarantia(totalProdutos);
     quantidadeItensEl.innerText = `${totalProdutos} Itens`;
-    totalItensEl.innerText = `${totalProdutos} item(s)`;
     precoItensEl.innerText = `R$ ${total.toFixed(2)}`;
     precoGarantiaEl.innerText = `R$ ${valorGarantia.toFixed(2)}`;
     precoEntregaEl.innerText = `R$ ${totalEntrega.toFixed(2)}`;
