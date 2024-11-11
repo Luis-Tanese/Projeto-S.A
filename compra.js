@@ -35,6 +35,7 @@ function carregarProdutos() {
 
 function atualizarTotal() {
     const quantidadeItensEl = document.getElementById("quantidade-itens");
+    const totalItensEl = document.getElementById("total-itens");
     const precoItensEl = document.getElementById("preco-itens");
     const precoGarantiaEl = document.getElementById("preco-garantia");
     const precoEntregaEl = document.getElementById("preco-entrega");
