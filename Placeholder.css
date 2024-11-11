@@ -207,6 +207,7 @@ h2 {
 
 .nome-produto{
     font-size: 46px;
+    overflow-wrap: break-word;
 }
 
 p {
