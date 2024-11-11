@@ -144,12 +144,13 @@ h2 {
 
 .notas{
     height: 20px;
-    margin-top: -30px;
+    margin-top: 0px;
 }
 
 .avaliacao-adicionarCarrinho{
     margin-left: 1.5%;
     margin-bottom: solid black;
+    margin-left: 4%;
 }
 
 .produto1{
@@ -205,8 +206,13 @@ h2 {
     width: 100%;
 }
 
-.nome-produto{
-    font-size: 46px;
+.nome-produto {
+    font-size: 2rem; /* Tamanho maior para o nome */
+    max-width: 25ch; /* Limita o texto a cerca de 25 caracteres */
+    white-space: nowrap; /* Garante que o texto fique em uma única linha */
+    overflow: hidden; /* Oculta o excesso de texto */
+    text-overflow: ellipsis; /* Exibe reticências (...) para texto longo */
+    margin-bottom: 10px; /* Espaço apenas para separar das estrelas */
 }
 
 p {
@@ -253,7 +259,7 @@ h1{
 
 .sobre-desconto{
     display: flex;
-    margin-top: 50%;
+    margin-top: 80%;
 }
 
 .imagem-produto-central{
@@ -277,6 +283,7 @@ h1{
     line-height: 40px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     margin: 120px 0 20px 20px;
+    margin-left: 3%;
     cursor: pointer;
     border: none;
 }
