@@ -31,6 +31,13 @@
   <li><strong>(LocalStorage): </strong>Todos os dados dos usuários devem ser armazenados no LocalStorage do navegador, permitindo que as informações persistam mesmo após o usuário recarregar a página ou fechar o navegador. 
  </li>
  </ul>
+
+ <h2>🎨 Paleta de Cores</h2>
+ <ul>
+  <li>Azul</li>
+  <li>Cinza</li>
+  <li>Preto e Branco</li>
+ </ul>
  
 <h1>Equipe:</h1>
 
