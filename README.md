@@ -16,15 +16,15 @@
 <h1>🧾Funcionalidades</h1>
  <h2>  Gerenciamento de Produtos</h2>
  <ul>
- <li><strong>Cadastro de Produtos:</strong> o sistema deve permitir que o admins registrem novos produtos no sistema.</li> 
- <li><strong>Edição de Produtos:</strong> a edição deve incluir a possibilidade de alterar os campos: nome, descrição, preço.</li>
- <li><strong>Exclusão de Produtos:</strong> o sistema deve permitir que o usuário exclua um produto do sistema.</li>
+ <li><strong>Cadastro de Produtos:</strong> o sistema faz com que os admins registrem novos produtos no sistema.</li> 
+ <li><strong>Edição de Produtos:</strong>a edição faz com que seja possível alterar os campos: nome, descrição, preço.</li>
+ <li><strong>Exclusão de Produtos:</strong>o sistema faz com que o usuário exclua um produto do sistema.</li>
  </ul>
  <h2>Funcionalidades de Autenticação de Usuários</h2>
  <ul>
- <li><strong>Cadastro de Usuários:</strong> o sistema deve permitir que novos usuários se registrem criando uma conta.</li>
- <li><strong>Login de Usuários:</strong> o sistema deve permitir que um usuário registrado faça login.</li>
- <li><strong>Validação de Login:</strong>Caso as credenciais estejam incorretas, o sistema deve informar o erro ao usuário. </li>
+ <li><strong>Cadastro de Usuários:</strong> o sistema faz com que novos usuários se registrem criando uma conta.</li>
+ <li><strong>Login de Usuários:</strong> o sistema faz com que um usuário registrado faça login.</li>
+ <li><strong>Validação de Login:</strong> caso as credenciais estejam incorretas, o sistema faz com que o erro seja informado ao usuário </li>
  </ul>   
  <h2>Armazenamento Local</h2>
  <ul>
