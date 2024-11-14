@@ -1,4 +1,5 @@
-const produtosBest = [
+// Lista de produtos para a seção "Mais Vendidos"
+const produtosMaisVendidos = [
     { nome: "Gabinete Gamer Hyrax", precoOriginal: 100, precoDesconto: 80, imagem: "Imagens/produto4.png", desconto: 20 },
     { nome: "Controle PS5", precoOriginal: 150, precoDesconto: 120, imagem: "Imagens/produto5.png", desconto: 20 },
     { nome: "Joystick Sem Fio Nintendo Switch", precoOriginal: 408, precoDesconto: 367, imagem: "Imagens/produto6.png", desconto: 10 },
@@ -12,8 +13,9 @@ const produtosBest = [
     { nome: "Oculus Quest 2", precoOriginal: 3915, precoDesconto: 2889, imagem: "Imagens/Esgotadoproduto32.png", desconto: 26 },
     { nome: "Asus Rog Phone", precoOriginal: 5200, precoDesconto: 4999, imagem: "Imagens/Esgotadoproduto33.png", desconto: 5 },
 ];
-produtosBest.forEach(produto => adicionarProduto("best-sellers", produto));
+produtosMaisVendidos.forEach(produto => adicionarProduto("mais-vendidos", produto));
 
+// Lista de produtos para a seção "Periféricos"
 const produtosPerifericos = [
     { nome: "Controle Powera Wired Super Mario Bros", precoOriginal: 300, precoDesconto: 200, imagem: "Imagens/produto7.png", desconto: 33 },
     { nome: "Headset Fone de Ouvido Havit", precoOriginal: 189, precoDesconto: 147, imagem: "Imagens/produto18.png", desconto: 14 },
@@ -26,6 +28,7 @@ const produtosPerifericos = [
 ];
 produtosPerifericos.forEach(produto => adicionarProduto("perifericos", produto));
 
+// Lista de produtos para a seção "Melhores Video Games"
 const produtosMelhores = [
     { nome: "ONIKUMA-K10", precoOriginal: 245, precoDesconto: 80, imagem: "Imagens/produto8.png", desconto: 66 },
     { nome: "Nintendo Switch Oled", precoOriginal: 2599, precoDesconto: 1889, imagem: "Imagens/produto9.png", desconto: 43 },
@@ -38,18 +41,20 @@ const produtosMelhores = [
     { nome: "PlayStation 5 Pro", precoOriginal: 6999, precoDesconto: 6509, imagem: "Imagens/Esgotadoproduto16.png", desconto: 3 },
     { nome: "PlayStation 3", precoOriginal: 1299, precoDesconto: 999, imagem: "Imagens/Esgotadoproduto17.png", desconto: 15 },
 ];
-produtosMelhores.forEach(produto => adicionarProduto("mais-vendidos", produto));
+produtosMelhores.forEach(produto => adicionarProduto("melhores-video-games", produto));
 
+// Função para movimentar o carrossel de produtos
 function moverCarrossel(categoria, direcao) {
     const container = document.getElementById(categoria);
-    const width = container.querySelector(".produto-item").offsetWidth;
-    container.scrollLeft += width * direcao;
+    const largura = container.querySelector(".produto-item").offsetWidth;
+    container.scrollLeft += largura * direcao;
 }
 
+// Função que adiciona um produto em uma categoria específica na página
 function adicionarProduto(categoria, produto) {
     const container = document.getElementById(categoria);
     let produtoHTML;
-    if (produto.imagem.includes("Esgotado")) {
+    if (produto.imagem.includes("Esgotado")) { // produto esgotado tem um visual diferente
         produtoHTML = `
         <div class="produto-item">
             <a href="javascript:void(0);" onclick="produtoEsgotado()" style="text-decoration: none; color: black">
@@ -65,7 +70,7 @@ function adicionarProduto(categoria, produto) {
             </a>
         </div>
     `;
-    } else {
+    } else { // produto disponível com link para a página específica
         let linkProduto = produto.nome.replace(/\s+/g, "-");
         produtoHTML = `
         <div class="produto-item">
@@ -87,48 +92,46 @@ function adicionarProduto(categoria, produto) {
 }
 
 const modal = document.getElementById("modalEsgotado");
-const buttonClose = document.getElementById("fecharModal");
+const botaoFechar = document.getElementById("fecharModal");
 
 function produtoEsgotado() {
     modal.showModal();
 }
-buttonClose.onclick = function () {
+botaoFechar.onclick = function () {
     modal.close();
 };
 
-let images = [
-    "Imagens/produto12.png",
-    "Imagens/produto13.png",
-    "Imagens/produto14.png"
-];
+let imagens = ["Imagens/produto12.png", "Imagens/produto13.png", "Imagens/produto14.png"];
+let indiceAtual = 0;
+let tempoIntervalo = 5000;
+let imagemBanner = document.getElementById("imagem-banner");
+let botoes = document.querySelectorAll(".botao-banner");
 
-let currentIndex = 0;
-let intervalTime = 5000;
-let bannerImage = document.getElementById("banner-image");
-let buttons = document.querySelectorAll(".banner-btn");
-
-function changeBanner() {
-    bannerImage.src = images[currentIndex];
-    buttons.forEach((btn, idx) => {
-        btn.classList.toggle("active", idx === currentIndex);
+function mudarBanner() {
+    imagemBanner.src = imagens[indiceAtual]; // troca a imagem do banner
+    botoes.forEach((btn, idx) => {
+        btn.classList.toggle("active", idx === indiceAtual); // muda o botão ativo
     });
-    currentIndex = (currentIndex + 1) % images.length;
+    indiceAtual = (indiceAtual + 1) % imagens.length;
 }
-setInterval(changeBanner, intervalTime);
-changeBanner();
+setInterval(mudarBanner, tempoIntervalo); // altera o banner a cada intervalo
+mudarBanner();
 
 let produtosRecentes = JSON.parse(localStorage.getItem("produtosRecentesStorage")) || [];
 
+// Calcula o preço com desconto aplicado
 function calcularPrecoComDesconto(preco, desconto) {
     return (preco - (preco * (desconto / 100))).toFixed(2);
 }
 
+// Função para carregar produtos recentes armazenados no localStorage
 function carregarProdutosRecentes() {
     produtosRecentes.forEach(produto => adicionarRecente(produto));
 }
 
+// Adiciona um produto recente na seção "Adicionados Recentemente"
 function adicionarRecente(produto) {
-    const container = document.getElementById("adicionados-recente");
+    const container = document.getElementById("adicionados-recentemente");
     const precoDesconto = calcularPrecoComDesconto(produto.precoOriginal, produto.desconto);
     const produtoHTML = `
         <div class="produto-item">
@@ -149,12 +152,12 @@ function adicionarRecente(produto) {
 }
 carregarProdutosRecentes();
 
+// Abre uma nova janela com informações detalhadas do produto
 function abrirProduto(nomeProduto) {
     const produto = produtosRecentes.find(p => p.nome === nomeProduto);
     if (produto) {
         const novaPagina = window.open("", "_blank");
-        const paginaProduto = `
-        <!DOCTYPE html>
+        const paginaProduto = `<!DOCTYPE html>
         <html lang="pt-br">
         <head>
             <meta charset="UTF-8">
@@ -241,7 +244,7 @@ function abrirProduto(nomeProduto) {
         </body>
         <script src="../Placeholder.js"></script>
         </html>
-        `;
+        `; // conteúdo da página do produto
         novaPagina.document.write(paginaProduto);
         novaPagina.document.close();
     }
@@ -253,15 +256,16 @@ function voltar() {
 
 let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-function abrirCarrin() {
-    const container = document.getElementById("conteiner3");
+function abrirCarrinho() {
+    const container = document.getElementById("container3");
     modalCarrinho.showModal();
     container.innerHTML = '';
     produtosCarrinho.forEach((item, index) => adicionarCarrinho(item, index));
 }
 
+// Adiciona um produto específico no modal do carrinho
 function adicionarCarrinho(item, index) {
-    const container = document.getElementById("conteiner3");
+    const container = document.getElementById("container3");
     const produtoHTML = `
     <div class="produto-item1" data-index="${index}">
         <div class="imagem-produto">
@@ -279,9 +283,10 @@ function adicionarCarrinho(item, index) {
     container.innerHTML += produtoHTML;
 }
 
+// Remove um produto do carrinho
 function removerProdutoCarrinho(index) {
-    produtosCarrinho.splice(index, 1);
-    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho));
+    produtosCarrinho.splice(index, 1); // remove o item pelo índice
+    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho)); // salva no localStorage
     modalCarrinho.close();
 }
 
@@ -289,31 +294,33 @@ document.getElementById("fecharCarrinho").onclick = function () {
     modalCarrinho.close();
 };
 
+// Contador de cliques no logo para abrir o modal de login escondido
 const logo = document.getElementById("imagem-logo");
-let clickCount = 0;
+let contagemCliques = 0;
 
 const EMAIL_VALIDO = "admin@arcadestop.com";
 const SENHA_VALIDO = "adminarcadestop";
 
 logo.addEventListener("click", () => {
-    clickCount++;
-    if (clickCount === 10) {
+    contagemCliques++;
+    if (contagemCliques === 10) {
         document.getElementById("loginModal").style.display = "block";
     }
 });
 
-document.getElementById("closeModal").onclick = function() {
+document.getElementById("fecharModalLogin").onclick = function() {
     document.getElementById("loginModal").style.display = "none";
 };
 
-document.getElementById("loginButton").onclick = function() {
+// Valida o login com email e senha predefinidos
+document.getElementById("botaoLogin").onclick = function() {
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
     
     if (email === EMAIL_VALIDO && senha === SENHA_VALIDO) {
-        window.location.href = "admin.html";
+        window.location.href = "admin.html"; // redireciona para a página de admin se os dados estiverem corretos
     } else {
-        document.getElementById("error").textContent = "Email ou senha inválidos.";
+        document.getElementById("erro").textContent = "Email ou senha inválidos."; // mensagem de erro
     }
 };
 
@@ -323,6 +330,7 @@ window.onclick = function(event) {
         modal2.style.display = "none";
     }
 };
+
 function comprarCarrinho(){
-    window.location.href = "https://arcadestop.netlify.app/compra.html"
+    window.location.href = "https://arcadestop.netlify.app/compra.html";
 }
