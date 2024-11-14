@@ -80,7 +80,7 @@ h1 {
     border-radius: 5px;
 }
 
-.URL-da-imagem{
+.url-da-imagem{
     padding: 10px 10px 10px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -110,7 +110,7 @@ h1 {
 }
 
 
-.botao-a-venda {
+.botao-vender {
     background-color: #357EEB;
     color: white;
     border: none;
@@ -124,11 +124,11 @@ h1 {
     margin-top: 20%;
 }
 
-.botao-a-venda:hover {
+.botao-vender:hover {
     background-color: #285bb5;
 }
 
-.botao-return{
+.botao-retornar{
     width: 7%;
     height: 30px;
     margin-left: 6%;
@@ -140,7 +140,7 @@ h1 {
     color: white;
 }
 
-.botao-return:hover{
+.botao-retornar:hover{
     background-color: #0e2347;
 }
 
@@ -148,7 +148,7 @@ ul{
     display: flex;
 }
 
-.container2{
+.container-produtos{
     display: flex;
     flex-wrap: wrap;
 }
@@ -196,7 +196,7 @@ ul{
     align-items: center;
 }
 
-.modal-content {
+.modal-conteudo {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
@@ -204,7 +204,7 @@ ul{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.close-btn {
+.fechar-btn {
     position: absolute;
     top: 10px;
     right: 10px;

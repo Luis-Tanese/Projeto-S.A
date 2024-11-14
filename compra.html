@@ -9,43 +9,43 @@
 <body>
     <div class="barra-de-cima">
         <nav>
-            <img id="imagem-logo" src="Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+            <img id="imagem-logo" src="Imagens/ArcadeStop_Logo.png" class="logo" alt="Logo" width="160" height="85">
             <ul>
                 <li>
-                    <div class="group">
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                        <input placeholder="Procure aqui..." type="search" class="input">
+                    <div class="grupo">
+                        <svg class="icone" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                        <input placeholder="Procure aqui..." type="search" class="campo-busca">
                     </div>
                 </li>
                 <li>
-                    <a id="login" href="/login.html"><img src="Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a>
+                    <a id="login" href="/login.html"><img src="Imagens/user_login.png" alt="LoginUsuario" width="45" height="45"></a>
                 </li>
                 <li>
-                    <a id="carrinho" onclick="abrirCarrin()" target="_blank"><img src="Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a>
+                    <a id="carrinho" onclick="abrirCarrinho()" target="_blank"><img src="Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a>
                 </li>
             </ul>
         </nav>
     </div>
-    <div class="shopping-container">
-        <div class="items-section">
+    <div class="container-compras">
+        <div class="secao-itens">
             <h2>Itens</h2>
             <p>Quantidade: <span id="quantidade-itens">0 Itens</span></p>
-            <div class="item-container" id="item-container"></div>
-            <div class="warranty-section">
+            <div class="container-item" id="container-itens"></div>
+            <div class="secao-garantia">
                 <p>Adicionar garantia ao(s) produto(s)?</p>
-                <label><input type="radio" name="warranty" value="sem-garantia" checked> Sem garantia - R$ 0,00</label>
-                <label><input type="radio" name="warranty" value="30-dias"> 30 dias - R$ 12,90</label>
-                <label><input type="radio" name="warranty" value="1-ano"> 1 ano - R$ 39,90</label>
+                <label><input type="radio" name="garantia" value="sem-garantia" checked> Sem garantia - R$ 0,00</label>
+                <label><input type="radio" name="garantia" value="30-dias"> 30 dias - R$ 12,90</label>
+                <label><input type="radio" name="garantia" value="1-ano"> 1 ano - R$ 39,90</label>
             </div>
         </div>
-        <div class="total-section">
+        <div class="secao-total">
             <h2>Total</h2>
             <p>Itens: <span id="preco-itens">R$ 0,00</span> </p>
             <p>Garantia: <span id="preco-garantia">R$ 0,00</span></p>
             <p>Taxa de entrega: <span id="preco-entrega">R$ 0,00</span></p>
             <hr>
             <p><strong id="total-geral">Total geral: R$ 0,00</strong></p>
-            <div class="payment-section">
+            <div class="secao-pagamento">
                 <p>Adicionar outra forma de pagamento</p>
                 <form>
                     <input type="text" placeholder="Número do cartão" required>
