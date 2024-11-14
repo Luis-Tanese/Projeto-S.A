@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +8,47 @@
     <title>Formulário de Venda</title>
 </head>
 <body>
-    <button onclick="voltar()" class="botao-return">Voltar as compras</button>
+    <button onclick="voltar()" class="botao-retornar">Voltar às Compras</button>
     <div class="container">
         <div class="conjunto-vender">
-            <form class="formulario-de-venda" id="form-produto">
+            <form class="formulario-de-venda" id="formulario-produto">
                 <h1>Vender Periférico</h1>
                 <div class="venda-container">
                     <div class="lado-esquerdo">
                         <label>
                             Nome do produto:
-                            <input required type="text" placeholder="Nome do produto" class="input-grande" id="nome">
+                            <input required type="text" placeholder="Nome do produto" class="input-grande" id="nome-produto">
                         </label>
                         <label>
                             Descrição do produto:
-                            <textarea required placeholder="Descrição do produto" class="input-grande2" id="descricao"></textarea>
+                            <textarea required placeholder="Descrição do produto" class="input-grande2" id="descricao-produto"></textarea>
                         </label>
                         <div class="input-lado-a-lado">
                             <label>
                                 Valor (R$):
-                                <input required type="number" placeholder="Valor do produto" class="input-menor" id="preco">
+                                <input required type="number" placeholder="Valor do produto" class="input-menor" id="preco-produto">
                             </label>
                             <label>
                                 Desconto (%):
-                                <input required type="number" placeholder="Desconto em %" class="input-menor" id="desconto">
+                                <input required type="number" placeholder="Desconto em %" class="input-menor" id="desconto-produto">
                             </label>
                         </div>
                     </div>
                     <div class="lado-direito">
-                        <div class="onde-ficara-imagem" id="imagem-preview">
+                        <div class="onde-ficara-imagem" id="imagem-previsao">
                             <span>Imagem ficará aqui</span>
                         </div>
                         <label>
-                            <input type="text" placeholder="Adicione a url" class="URL-da-imagem" id="imagem">
+                            <input type="text" placeholder="Adicione a URL da imagem" class="url-da-imagem" id="url-imagem">
                         </label>
-                        <button class="botao-a-venda" id="submit">Colocar à venda</button>
+                        <button class="botao-vender" id="botao-enviar">Colocar à venda</button>
                     </div>
                 </div>
             </form>
-            <div class="container2" id="produtos-recentes"></div>
+            <div class="container-produtos" id="produtos-recentes"></div>
             <div id="modal-confirmacao" class="modal">
-                <div class="modal-content">
-                    <span class="close-btn">&times;</span>
+                <div class="modal-conteudo">
+                    <span class="fechar-btn">&times;</span>
                     <p id="texto-confirmacao">Você tem certeza que deseja remover este produto?</p>
                     <div id="produto-info-modal">
                         <img id="imagem-produto-modal" src="" alt="Imagem do Produto" style="max-width: 150px; max-height: 150px; display: none;">

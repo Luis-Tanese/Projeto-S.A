@@ -11,7 +11,7 @@ body {
 
 /* Barra de cima começa aqui */
 
-.barra-de-cima nav {
+.barra-superior nav {
     display: flex;
     width: 100%;
     height: 9%;
@@ -25,36 +25,36 @@ body {
     z-index: 69420;
 }
 
-.barra-de-cima nav img.Logo {
+.barra-superior nav img.logo {
     margin-left: 20px;
     cursor: pointer;
 }
 
-.barra-de-cima nav ul {
+.barra-superior nav ul {
     display: flex;
     align-items: center;
     margin-right: 20px;
 }
 
-.barra-de-cima nav ul li {
+.barra-superior nav ul li {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 0 10px;
 }
 
-.barra-de-cima nav ul li a img {
+.barra-superior nav ul li a img {
     transition: top ease 0.5s;
 }
 
-.barra-de-cima .group {
+.barra-superior .grupo {
     display: flex;
     align-items: center;
     position: relative;
     width: 700px;
 }
 
-.barra-de-cima .input {
+.barra-superior .entrada {
     width: 100%;
     height: 40px;
     padding: 0 1rem;
@@ -67,17 +67,17 @@ body {
     transition: .3s ease;
 }
 
-.barra-de-cima .input::placeholder {
+.barra-superior .entrada::placeholder {
     color: #9e9ea7;
 }
 
-.barra-de-cima .input:focus, .barra-de-cima .input:hover {
+.barra-superior .entrada:focus, .barra-superior .entrada:hover {
     border-color: rgba(42, 74, 255, 0.4);
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(76, 81, 234, 0.1);
 }
 
-.barra-de-cima .icon {
+.barra-superior .icone {
     position: absolute;
     left: 1rem;
     fill: #9e9ea7;
@@ -110,7 +110,7 @@ h2 {
     border-radius: 10px;
 }
 
-.carrossel-container {
+.container-carrossel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,7 +118,7 @@ h2 {
     padding: 10px 0;
 }
 
-.produtos-lista {
+.lista-produtos {
     display: flex;
     overflow-x: auto;
     width: 80%;
@@ -129,7 +129,7 @@ h2 {
     max-width: calc(100vw - 40px);
 }
 
-.produtos-lista::-webkit-scrollbar {
+.lista-produtos::-webkit-scrollbar {
     display: none;
 }
 
@@ -162,7 +162,7 @@ h2 {
     transform: scale(1.05);
 }
 
-.prevBtn, .nextBtn {
+.btnAnterior, .btnProximo {
     background-color: rgba(0, 0, 0, 0.6);
     border: none;
     color: white;
@@ -175,15 +175,15 @@ h2 {
     z-index: 1;
 }
 
-.prevBtn {
+.btnAnterior {
     left: 100px;
 }
 
-.nextBtn {
+.btnProximo {
     right: 100px;
 }
 
-.black-banner {
+.banner-preto {
     background-image: url("https://img.freepik.com/vetores-gratis/fundo-gradiente-preto-com-cubos_52683-76469.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -199,7 +199,7 @@ h2 {
     z-index: 1;
 }
 
-.banner-content {
+.conteudo-banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -208,32 +208,32 @@ h2 {
     margin-bottom: 20px;
 }
 
-.text-section {
+.sessao-texto {
     max-width: 50%;
 }
 
-.text-section h1 {
+.sessao-texto h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.text-section p {
+.sessao-texto p {
     font-size: 1.2rem;
 }
 
-.image-section img {
+.sessao-imagem img {
     max-width: 100%;
     height: auto;
 }
 
-.buttons-section {
+.sessao-botoes {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.banner-btn {
+.botao-banner {
     background-color: rgba(42, 74, 255, 0.4);
     border-radius: 10px;
     cursor: pointer;
@@ -245,7 +245,7 @@ h2 {
     text-align: center;
 }
 
-.banner-btn:after {
+.botao-banner:after {
     content: '';
     position: absolute;
     top: 0;
@@ -258,7 +258,7 @@ h2 {
     transition: transform 5s linear;
 }
 
-.banner-btn.active:after {
+.botao-banner.active:after {
     transform: scaleX(1);
 }
 
@@ -308,7 +308,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0);
 }
 
-.tituloCarrinho {
+.titulo-carrinho {
     text-align: center;
     font-size: 40px;
     border-bottom: 2px solid;
@@ -396,7 +396,7 @@ h2 {
     background-color: #d32f2f;
 }
 
-.botao-container {
+.container-botao {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -442,27 +442,27 @@ footer{
     height: 240px;
 }
 
-.TextoFooter{
+.texto-footer{
     padding-top: 50px;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 25px;
 }
 
-.TextoFooter1{
+.texto-footer1{
     padding-top: 35px;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 25px;
 }
 
-#footer_list li h3 {
+#lista-footer li h3 {
     font-family: "Inter", sans-serif, italic;
     font-weight: 400;
     font-size: 15px;
 }
 
-#footer_list{
+#lista-footer{
     list-style: none;
 }
 
@@ -471,7 +471,7 @@ footer{
     margin-right: 40px;
 }
 
-.social img{
+.redes-sociais img{
     display: flex;
     margin: 0;
     margin-top: 10%;
@@ -525,7 +525,7 @@ h3:hover{
     background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content {
+.conteudo-modal {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -533,7 +533,7 @@ h3:hover{
     width: 300px;
 }
 
-.close {
+.fechar {
     color: #aaa;
     float: right;
     font-size: 28px;
