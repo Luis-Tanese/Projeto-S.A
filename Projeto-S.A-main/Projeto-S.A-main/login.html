@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap">
+    <title>ArcadeStop (Login)</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <a href="/index.html" class="back-button">← Voltar</a>
+            <div class="logo"><img src="Imagens/ArcadeStop_Logo.png" alt="Logo" width="500" height="280"></div>
+            <div class="login-section">
+                <p>Não tem uma conta?</p>
+                <a href="/registro.html">Cadastre-se aqui!</a>
+            </div>
+        </div>
+        <div class="right-side">
+            <form class="form">
+                <p class="title">Bem vindo de volta!</p>
+                <p class="message">Preencha os campos abaixo para fazer login.</p>
+                <label>
+                    <input required="" placeholder="" id="email" type="email" class="input">
+                    <span id="spanEmail">Email</span>
+                </label> 
+                    
+                <label>
+                    <input required="" placeholder="" id="senha" type="password" class="input">
+                    <span span="spanSenha">Senha</span>
+                </label>
+                <button class="submit" onclick="login()">Login</button>
+                <p class="signin">Não tem uma conta? <a href="/registro.html">Cadastre-se!</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="login.js"></script>
+</html>

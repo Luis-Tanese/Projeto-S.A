@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+/* Barra de cima */
+.barra-de-cima nav {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.barra-de-cima nav img.logo {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.barra-de-cima nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.barra-de-cima nav ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 10px;
+}
+
+.barra-de-cima nav ul li a img {
+    transition: top ease 0.5s;
+}
+
+.barra-de-cima .grupo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 700px;
+}
+
+.barra-de-cima .campo-busca {
+    width: 100%;
+    height: 40px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+.barra-de-cima .campo-busca::placeholder {
+    color: #9e9ea7;
+}
+
+.barra-de-cima .campo-busca:focus, .barra-de-cima .campo-busca:hover {
+    border-color: rgba(42, 74, 255, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(76, 81, 234, 0.1);
+}
+
+.barra-de-cima .icone {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+#carrinho {
+    cursor: pointer;
+}
+
+.container-compras {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-left: 20%;
+    max-width: 1200px;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.secao-itens {
+    flex: 2;
+    background-color: #e5e5e5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.secao-itens h2,
+.secao-total h2 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.container-item {
+    margin-top: 20px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.item img {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.item-info h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.secao-quantidade {
+    margin-top: 10px;
+}
+
+.secao-quantidade label {
+    margin-right: 10px;
+}
+
+.item-info button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.secao-garantia {
+    background-color: #d7d7d7;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.secao-garantia label {
+    display: block;
+    margin-top: 5px;
+}
+
+.secao-total {
+    flex: 1;
+    background-color: #e5e5e5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.secao-total p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.secao-total p span {
+    float: right;
+}
+
+.secao-pagamento {
+    margin-top: 15px;
+}
+
+.secao-pagamento form input,
+.secao-pagamento form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.secao-pagamento form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.secao-pagamento p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
