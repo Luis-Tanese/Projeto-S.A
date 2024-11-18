@@ -14,6 +14,10 @@ const confirmaSenha = document.getElementById('confirmaSenha')
 const spanConfirmaSenha  = document.getElementById('spanConfirmaSenha')
 validConfirmaSenha = false
 
+// Função genérica para validação de campos
+
+// Validação do campo email
+
 email.addEventListener('keyup', () => {
     const validDomains = ['@gmail.com', '@yahoo.com', '@outlook.com', '@hotmail.com', '@aol.com'];
     const isValidDomain = validDomains.some(domain => email.value.endsWith(domain));
@@ -27,6 +31,7 @@ email.addEventListener('keyup', () => {
         email.setAttribute('style', 'border-color: red');
     }
 })
+// Validação do campo sobrenome
 
 sobrenome.addEventListener('keyup', () => {
     if(sobrenome.value.length <= 2){
@@ -40,6 +45,8 @@ sobrenome.addEventListener('keyup', () => {
     }
 })
 
+// Validação do campo nome
+
 nome.addEventListener('keyup', () => {
     if(nome.value.length <= 2){
         validNome  = false
@@ -51,6 +58,8 @@ nome.addEventListener('keyup', () => {
         nome.setAttribute('style', 'border-color: green')
     }
 })
+
+// Validação do campo senha
 
 senha.addEventListener('keyup', () => {
     if(senha.value.length <= 5){
@@ -64,6 +73,8 @@ senha.addEventListener('keyup', () => {
     }
 })
    
+// Validação do campo confirmação de senha
+
 confirmaSenha.addEventListener('keyup', () => {
     if(senha.value != confirmaSenha.value){
         validConfirmaSenha = false
@@ -75,6 +86,8 @@ confirmaSenha.addEventListener('keyup', () => {
         confirmaSenha.setAttribute('style', 'border-color: green')
     }
 })
+
+// Função para cadastrar
 
 function cadastrar(){
     if(validEmail && validSenha && validSobrenome && validNome  && validConfirmaSenha){
