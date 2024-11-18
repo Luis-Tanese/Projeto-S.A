@@ -137,6 +137,26 @@ h2 {
     cursor: pointer;
 }
 
+.voltar-tela-inicial {
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #357de9;
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin: 120px 0 20px 20px;
+    margin-left: 3%;
+    cursor: pointer;
+    border: none;
+}
+
+.voltar-tela-inicial:hover {
+    background-color: #275cb8;
+}
+
 .alinhas-flex{
     display: flex;
     flex-direction: row;
@@ -272,25 +292,6 @@ h1{
     text-align: center;
 }
 
-.voltar-tela-inicial {
-    width: 160px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #357de9;
-    color: #FFFFFF;
-    font-size: 1rem;
-    text-align: center;
-    line-height: 40px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    margin: 120px 0 20px 20px;
-    margin-left: 3%;
-    cursor: pointer;
-    border: none;
-}
-
-.voltar-tela-inicial:hover {
-    background-color: #275cb8;
-}
 
 /* Carrinho */
 
