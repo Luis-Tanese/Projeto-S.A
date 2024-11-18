@@ -337,6 +337,9 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow-y: scroll; /* Adicionar a rolagem vertical */
+    max-height: 50%;
+    flex: 1;
     padding: 15px;
     gap: 15px;
 }

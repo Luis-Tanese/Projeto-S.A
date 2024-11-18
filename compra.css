@@ -95,7 +95,7 @@ body {
     margin-left: 20%;
     max-width: 1200px;
     gap: 20px;
-    margin-top: 100px;
+
 }
 
 .secao-itens {
@@ -206,4 +206,40 @@ body {
 .secao-pagamento p {
     font-size: 0.9em;
     margin-bottom: 10px;
+}
+
+.voltar-tela-inicial{
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border: #9e9ea7;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #ebebeb;
+    margin-bottom: 35px;
+    margin-left: 60px; 
+}
+
+.voltar-tela-inicial:hover{
+    background-color: #dadae0;
+    cursor: pointer;
+}
+
+.voltar-tela-inicial {
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #357de9;
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin: 100px 0 10px 20px;
+    margin-left: 3%;
+    cursor: pointer;
+    border: none;
+}
+
+.voltar-tela-inicial:hover {
+    background-color: #275cb8;
 }

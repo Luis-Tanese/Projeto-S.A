@@ -113,3 +113,7 @@ window.onload = function () {
     carregarProdutos(); // Carrega e exibe os produtos no carrinho
     inicializarListenersGarantia(); // Configura os listeners de garantia
 };
+
+function voltar() {
+    window.location.href = "https://arcadestop.netlify.app/";
+}
