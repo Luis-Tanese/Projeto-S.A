@@ -338,30 +338,29 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 15px;
-    height: 52%;
-    overflow-y: auto;
+    gap: 15px;
 }
 
 .produto-item1 {
     cursor: pointer;
     background-color: white;
     border-radius: 15px;
-    flex-basis: calc(33.33% - 10px);
-    margin-bottom: 100px;
+    flex: 1 1 calc(33.33% - 15px);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    margin-bottom: 20px;
+    max-width: calc(33.33% - 15px);
 }
 
 .produto-item1 img {
-    width: 100%;
-    height: auto;
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .produto-item1 .produto-info {
@@ -369,14 +368,16 @@ h2 {
     text-align: center;
 }
 
-.produto-item1 .produto-info h3 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+.produto-item1 h3 {
+    text-align: center;
+    font-size: 1rem;
     margin: 10px 0;
-    font-size: 16px;
     border-bottom: 2px solid black;
     padding-bottom: 5px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .produto-item1 .botao-remover-carrinho {
@@ -386,10 +387,9 @@ h2 {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    width: 100%;
     font-size: 14px;
+    width: 100%;
+    text-align: center;
 }
 
 .produto-item1 .botao-remover-carrinho:hover {
