@@ -542,3 +542,7 @@ h3:hover{
     font-size: 28px;
     font-weight: bold;
 }
+
+#botaoLogin{
+    cursor: pointer;
+}
