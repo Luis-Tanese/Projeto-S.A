@@ -39,7 +39,7 @@ function login(){
         const parsedLogin = JSON.parse(storedLogin)
         if (emailValue === parsedLogin.email && senhaValue === parsedLogin.senha) {
             alert('Login realizado com sucesso!')
-            window.location.href = 'index.html'
+            window.location.href = 'https://arcadestop.netlify.app/'
         } else {
             alert('E-mail ou senha incorretos.');
         }
