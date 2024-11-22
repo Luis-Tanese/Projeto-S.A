@@ -13,8 +13,7 @@ body {
 .barra-de-cima nav {
     display: flex;
     width: 100%;
-    height: 70px;
-    padding: 10px 0;
+    height: 10%;
     align-items: center;
     justify-content: space-between;
     background-color: #FFFFFF;
@@ -25,14 +24,14 @@ body {
 }
 
 .barra-de-cima nav img.logo {
-    margin-left: 20px;
+    margin-left: 2%;
     cursor: pointer;
 }
 
 .barra-de-cima nav ul {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 1%;
 }
 
 .barra-de-cima nav ul li {
@@ -92,7 +91,7 @@ body {
     display: flex;
     justify-content: center;
     width: 80%;
-    margin-left: 20%;
+    margin-left: 13%;
     max-width: 1200px;
     gap: 20px;
 
