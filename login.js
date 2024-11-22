@@ -4,6 +4,9 @@ validEmail = false
 const senha = document.getElementById('senha')
 const spanSenha = document.getElementById('spanSenha')
 validSenha = false
+// Função genérica para validação de campos
+
+// Validação do campo email
 
 email.addEventListener('keyup', () => {
     const validDomains = ['@gmail.com', '@yahoo.com', '@outlook.com', '@hotmail.com', '@aol.com'];
@@ -18,6 +21,7 @@ email.addEventListener('keyup', () => {
         email.setAttribute('style', 'border-color: red');
     }
 })
+// Validação do campo senha
 
 senha.addEventListener('keyup', () => {
     if(senha.value.length < 6){
@@ -30,6 +34,7 @@ senha.addEventListener('keyup', () => {
         senha.setAttribute('style', 'border-color: green')
     }
 })
+// Função para realizar login
 
 function login(){
     const emailValue = email.value
