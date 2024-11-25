@@ -4,7 +4,7 @@
 
 <h1 align="center">Projeto S.A</h1>
 
-<p>O objetivo dessa atividade é criar um sistema de gerenciamento de produtos para a empresa "TechStore", utilizando HTML, CSS e JavaScript. </p>
+<p>O objetivo dessa atividade é criar um sistema de gerenciamento de produtos para a empresa "ArcadeStop", utilizando HTML, CSS e JavaScript. </p>
 
 <p align="center">
 <img width="280" height="200" src="https://github.com/user-attachments/assets/2b8a1162-89ea-430e-99fe-87e93ad7ab52" ></img> 
