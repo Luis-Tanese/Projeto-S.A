@@ -299,7 +299,7 @@ const logo = document.getElementById("imagem-logo");
 let contagemCliques = 0;
 
 const EMAIL_VALIDO = "admin@arcadestop.com";
-const SENHA_VALIDO = "adminarcadestop";
+const SENHA_VALIDO = "admin123";
 
 logo.addEventListener("click", () => {
     contagemCliques++;
