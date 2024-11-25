@@ -115,5 +115,5 @@ window.onload = function () {
 };
 
 function voltar() {
-    window.location.href = "https://arcadestop.netlify.app/";
+    window.location.href = "https://arcadestop.vercel.app/";
 }

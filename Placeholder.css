@@ -227,12 +227,12 @@ h2 {
 }
 
 .nome-produto {
-    font-size: 2rem; /* Tamanho maior para o nome */
-    max-width: 25ch; /* Limita o texto a cerca de 25 caracteres */
-    white-space: nowrap; /* Garante que o texto fique em uma única linha */
-    overflow: hidden; /* Oculta o excesso de texto */
-    text-overflow: ellipsis; /* Exibe reticências (...) para texto longo */
-    margin-bottom: 10px; /* Espaço apenas para separar das estrelas */
+    font-size: 2rem;
+    max-width: 25ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
 }
 
 p {
@@ -295,6 +295,22 @@ h1{
 
 /* Carrinho */
 
+#fecharModal{
+
+    float: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#fecharModal:hover{
+    background-color: rgb(133, 131, 131);
+}
+
 #modalCarrinho {
     background-color: rgb(204, 204, 204);
     width: 30%;
@@ -309,7 +325,7 @@ h1{
     background-color: rgba(0, 0, 0, 0);
 }
 
-.tituloCarrinho {
+.titulo-carrinho {
     text-align: center;
     font-size: 40px;
     border-bottom: 2px solid;
@@ -338,31 +354,33 @@ h1{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow-y: scroll;
+    max-height: 50%;
+    flex: 1;
     padding: 15px;
-    height: 52%;
-    overflow-y: auto;
+    gap: 15px;
 }
 
 .produto-item1 {
     cursor: pointer;
     background-color: white;
     border-radius: 15px;
-    flex-basis: calc(33.33% - 10px);
-    margin-bottom: 100px;
+    flex: 1 1 calc(33.33% - 15px);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    margin-bottom: 20px;
+    max-width: calc(33.33% - 15px);
 }
 
 .produto-item1 img {
-    width: 100%;
-    height: auto;
-    max-width: 100px;
-    max-height: 100px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .produto-item1 .produto-info {
@@ -370,14 +388,16 @@ h1{
     text-align: center;
 }
 
-.produto-item1 .produto-info h3 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
+.produto-item1 h3 {
+    text-align: center;
+    font-size: 1rem;
     margin: 10px 0;
-    font-size: 16px;
     border-bottom: 2px solid black;
     padding-bottom: 5px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .produto-item1 .botao-remover-carrinho {
@@ -387,17 +407,16 @@ h1{
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-    width: 100%;
     font-size: 14px;
+    width: 100%;
+    text-align: center;
 }
 
 .produto-item1 .botao-remover-carrinho:hover {
     background-color: #d32f2f;
 }
 
-.botao-container {
+.container-botao {
     display: flex;
     justify-content: center;
     margin-top: 20px;

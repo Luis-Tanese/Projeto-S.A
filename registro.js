@@ -110,7 +110,7 @@ function cadastrar(){
         console.log(registroString + " " + registro)
         localStorage.setItem("registro", registroString)
         localStorage.setItem("login", loginString)
-        window.location.href = 'http://127.0.0.1:5500/login.html'
+        window.location.href = 'https://arcadestop.vercel.app/login.html'
     } else {
         alert('algo está errado.')
     }

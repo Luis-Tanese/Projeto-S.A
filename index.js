@@ -230,12 +230,12 @@ function abrirProduto(nomeProduto) {
                     </div>
                 </div>
 
-                <div class="carrinhoModal">
+                <div class="modal-carrinho">
                     <dialog id="modalCarrinho">
                         <button id="fecharCarrinho"><strong>X</strong></button>
-                        <h1 class="tituloCarrinho">Suas compras</h1>
-                        <div class="conteiner3" id="conteiner3"></div>
-                        <div class="botao-container">
+                        <h1 class="titulo-carrinho">Suas compras</h1>
+                        <div class="conteiner3" id="container3"></div>
+                        <div class="container-botao">
                             <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
                         </div>
                     </dialog>
@@ -251,7 +251,7 @@ function abrirProduto(nomeProduto) {
 }
 
 function voltar() {
-    window.location.href = "https://arcadestop.netlify.app/";
+    window.location.href = "https://arcadestop.vercel.app/";
 }
 
 let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -332,5 +332,5 @@ window.onclick = function(event) {
 };
 
 function comprarCarrinho(){
-    window.location.href = "https://arcadestop.netlify.app/compra.html";
+    window.location.href = "https://arcadestop.vercel.app/compra.html";
 }
