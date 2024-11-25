@@ -122,5 +122,5 @@ carregarProdutosRecentes();
 
 // Função para redirecionar o usuário de volta à página de compras
 function voltar() {
-    window.location.href = "https://arcadestop.netlify.app/";
+    window.location.href = "https://arcadestop.vercel.app/";
 }

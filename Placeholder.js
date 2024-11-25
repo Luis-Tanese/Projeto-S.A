@@ -48,7 +48,7 @@ if (botaoCarrinho) {
 }
 
 function voltar() {
-    window.location.href = "https://arcadestop.netlify.app/";
+    window.location.href = "https://arcadestop.vercel.app/";
 }
 
 let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
