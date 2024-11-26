@@ -445,27 +445,27 @@ footer{
     height: 240px;
 }
 
-.texto-footer{
+.TextoFooter{
     padding-top: 50px;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 25px;
 }
 
-.texto-footer1{
+.TextoFooter1{
     padding-top: 35px;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 25px;
 }
 
-#lista-footer li h3 {
+#footer_list li h3 {
     font-family: "Inter", sans-serif, italic;
     font-weight: 400;
     font-size: 15px;
 }
 
-#lista-footer{
+#footer_list{
     list-style: none;
 }
 
@@ -474,11 +474,11 @@ footer{
     margin-right: 40px;
 }
 
-.redes-sociais img{
+.social img{
     display: flex;
     margin: 0;
-    margin-top: 10%;
-    margin-left: 18%;
+    margin-top: 6%;
+    margin-left: 23%;
     width: 25px;
     height: 25px;
 }
@@ -494,17 +494,20 @@ footer{
 
 .caixa2 h3 {
     text-align: left;
+    margin-left: 6%;
 
 }
 
 .caixa3 h3 {
+    margin-left: 23%;
     text-align: left;
-    margin-left: 50px;
+    
 }
 
 .social h3 {
     text-align: left;
-    margin-left: 70px;
+    margin-left: 36%;
+   
 }
 
 h3:hover{
