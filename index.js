@@ -43,6 +43,7 @@ const produtosMelhores = [
 ];
 produtosMelhores.forEach(produto => adicionarProduto("melhores-video-games", produto));
 
+
 // Função para movimentar o carrossel de produtos
 function moverCarrossel(categoria, direcao) {
     const container = document.getElementById(categoria);
@@ -57,205 +58,205 @@ function adicionarProduto(categoria, produto) {
     if (produto.imagem.includes("Esgotado")) { // produto esgotado tem um visual diferente
         produtoHTML = `
         <div class="produto-item">
-            <a href="javascript:void(0);" onclick="produtoEsgotado()" style="text-decoration: none; color: black">
+        <a href="javascript:void(0);" onclick="produtoEsgotado()" style="text-decoration: none; color: black">
             <img src="${produto.imagem}" alt="${produto.nome}">
             <div class="produto-info">
-                <h3>${produto.nome}</h3>
-                <p class="preco">
-                    <span class="balao-desconto">${produto.desconto}%</span>
+            <h3>${produto.nome}</h3>
+            <p class="preco">
+            <span class="balao-desconto">${produto.desconto}%</span>
                     <span class="preco-original">R$ ${produto.precoOriginal}</span>
                     <div class="preco-desconto">R$ ${produto.precoDesconto}</div>
-                </p>
+                    </p>
             </div>
             </a>
-        </div>
-    `;
-    } else { // produto disponível com link para a página específica
-        let linkProduto = produto.nome.replace(/\s+/g, "-");
-        produtoHTML = `
-        <div class="produto-item">
+            </div>
+            `;
+        } else { // produto disponível com link para a página específica
+            let linkProduto = produto.nome.replace(/\s+/g, "-");
+            produtoHTML = `
+            <div class="produto-item">
             <a href="SitesProdutos/${linkProduto}.html" style="text-decoration: none; color: black">
             <img src="${produto.imagem}" alt="${produto.nome}">
             <div class="produto-info">
-                <h3>${produto.nome}</h3>
-                <p class="preco">
-                    <span class="balao-desconto">${produto.desconto}%</span>
-                    <span class="preco-original">R$ ${produto.precoOriginal}</span>
-                    <div class="preco-desconto">Preço: R$ ${produto.precoDesconto}</div>
-                </p>
+            <h3>${produto.nome}</h3>
+            <p class="preco">
+            <span class="balao-desconto">${produto.desconto}%</span>
+            <span class="preco-original">R$ ${produto.precoOriginal}</span>
+            <div class="preco-desconto">Preço: R$ ${produto.precoDesconto}</div>
+            </p>
             </div>
             </a>
-        </div>
-    `;
+            </div>
+            `;
+        }
+        container.innerHTML += produtoHTML;
     }
-    container.innerHTML += produtoHTML;
-}
-
-const modal = document.getElementById("modalEsgotado");
-const botaoFechar = document.getElementById("fecharModal");
-
-function produtoEsgotado() {
-    modal.showModal();
-}
-botaoFechar.onclick = function () {
-    modal.close();
-};
-
-let imagens = ["Imagens/produto12.png", "Imagens/produto13.png", "Imagens/produto14.png"];
-let indiceAtual = 0;
-let tempoIntervalo = 5000;
-let imagemBanner = document.getElementById("imagem-banner");
-let botoes = document.querySelectorAll(".botao-banner");
-
-function mudarBanner() {
-    imagemBanner.src = imagens[indiceAtual]; // troca a imagem do banner
-    botoes.forEach((btn, idx) => {
-        btn.classList.toggle("active", idx === indiceAtual); // muda o botão ativo
-    });
-    indiceAtual = (indiceAtual + 1) % imagens.length;
-}
-setInterval(mudarBanner, tempoIntervalo); // altera o banner a cada intervalo
-mudarBanner();
-
-let produtosRecentes = JSON.parse(localStorage.getItem("produtosRecentesStorage")) || [];
-
-// Calcula o preço com desconto aplicado
-function calcularPrecoComDesconto(preco, desconto) {
-    return (preco - (preco * (desconto / 100))).toFixed(2);
-}
-
-// Função para carregar produtos recentes armazenados no localStorage
-function carregarProdutosRecentes() {
-    produtosRecentes.forEach(produto => adicionarRecente(produto));
-}
-
-// Adiciona um produto recente na seção "Adicionados Recentemente"
-function adicionarRecente(produto) {
-    const container = document.getElementById("adicionados-recentemente");
-    const precoDesconto = calcularPrecoComDesconto(produto.precoOriginal, produto.desconto);
-    const produtoHTML = `
+    
+    const modal = document.getElementById("modalEsgotado");
+    const botaoFechar = document.getElementById("fecharModal");
+    
+    function produtoEsgotado() {
+        modal.showModal();
+    }
+    botaoFechar.onclick = function () {
+        modal.close();
+    };
+    
+    let imagens = ["Imagens/produto12.png", "Imagens/produto13.png", "Imagens/produto14.png"];
+    let indiceAtual = 0;
+    let tempoIntervalo = 5000;
+    let imagemBanner = document.getElementById("imagem-banner");
+    let botoes = document.querySelectorAll(".botao-banner");
+    
+    function mudarBanner() {
+        imagemBanner.src = imagens[indiceAtual]; // troca a imagem do banner
+        botoes.forEach((btn, idx) => {
+            btn.classList.toggle("active", idx === indiceAtual); // muda o botão ativo
+        });
+        indiceAtual = (indiceAtual + 1) % imagens.length;
+    }
+    setInterval(mudarBanner, tempoIntervalo); // altera o banner a cada intervalo
+    mudarBanner();
+    
+    let produtosRecentes = JSON.parse(localStorage.getItem("produtosRecentesStorage")) || [];
+    
+    // Calcula o preço com desconto aplicado
+    function calcularPrecoComDesconto(preco, desconto) {
+        return (preco - (preco * (desconto / 100))).toFixed(2);
+    }
+    
+    // Função para carregar produtos recentes armazenados no localStorage
+    function carregarProdutosRecentes() {
+        produtosRecentes.forEach(produto => adicionarRecente(produto));
+    }
+    
+    // Adiciona um produto recente na seção "Adicionados Recentemente"
+    function adicionarRecente(produto) {
+        const container = document.getElementById("adicionados-recentemente");
+        const precoDesconto = calcularPrecoComDesconto(produto.precoOriginal, produto.desconto);
+        const produtoHTML = `
         <div class="produto-item">
-            <a href="javascript:void(0);" onclick="abrirProduto('${produto.nome}')" style="text-decoration: none; color: black">
-                <img src="${produto.imagem}" alt="${produto.nome}" width="100">
-                <div class="produto-info">
-                    <h3>${produto.nome}</h3>
-                    <p class="preco">
-                        <span class="balao-desconto">${produto.desconto}%</span>
-                        <span class="preco-original">R$ ${produto.precoOriginal}</span>
-                        <div class="preco-desconto">Preço: R$ ${precoDesconto}</div>
-                    </p>
-                </div>
-            </a>
+        <a href="javascript:void(0);" onclick="abrirProduto('${produto.nome}')" style="text-decoration: none; color: black">
+        <img src="${produto.imagem}" alt="${produto.nome}" width="100">
+        <div class="produto-info">
+        <h3>${produto.nome}</h3>
+        <p class="preco">
+        <span class="balao-desconto">${produto.desconto}%</span>
+        <span class="preco-original">R$ ${produto.precoOriginal}</span>
+        <div class="preco-desconto">Preço: R$ ${precoDesconto}</div>
+        </p>
         </div>
-    `;
-    container.innerHTML += produtoHTML;
-}
-carregarProdutosRecentes();
-
-// Abre uma nova janela com informações detalhadas do produto
-function abrirProduto(nomeProduto) {
-    const produto = produtosRecentes.find(p => p.nome === nomeProduto);
-    if (produto) {
-        const novaPagina = window.open("", "_blank");
-        const paginaProduto = `<!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
+        </a>
+        </div>
+        `;
+        container.innerHTML += produtoHTML;
+    }
+    carregarProdutosRecentes();
+    
+    // Abre uma nova janela com informações detalhadas do produto
+    function abrirProduto(nomeProduto) {
+        const produto = produtosRecentes.find(p => p.nome === nomeProduto);
+        if (produto) {
+            const novaPagina = window.open("", "_blank");
+            const paginaProduto = `<!DOCTYPE html>
+            <html lang="pt-br">
+            <head>
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="../Placeholder.css">
             <title>${produto.nome}</title>
-        </head>
-        <body>
+            </head>
+            <body>
             <div class="barra-de-cima">
-                <nav>
-                    <img onclick="voltar()" src="../Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
-                    <ul>
-                        <li>
-                            <div class="group">
-                                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
-                                    <g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g>
-                                </svg>
-                                <input placeholder="Procure aqui..." type="search" class="input">
-                            </div>
-                        </li>
-                        <li><a id="login" href="/login.html"><img src="../Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a></li>
-                        <li><a id="carrinho" onclick="abrirCarrin()" target="_blank"><img src="../Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a></li>
-                    </ul>
-                </nav>
+            <nav>
+            <img onclick="voltar()" src="../Imagens/ArcadeStop_Logo.png" class="Logo" alt="Logo" width="160" height="85">
+            <ul>
+            <li>
+            <div class="group">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+            <g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g>
+            </svg>
+            <input placeholder="Procure aqui..." type="search" class="input">
+            </div>
+            </li>
+            <li><a id="login" href="/login.html"><img src="../Imagens/user_login.png" alt="UserLogin" width="45" height="45"></a></li>
+            <li><a id="carrinho" onclick="abrirCarrin()" target="_blank"><img src="../Imagens/carrinho.png" alt="Carrinho" width="45" height="45"></a></li>
+            </ul>
+            </nav>
             </div>
             
             <button class="voltar-tela-inicial" onclick="voltar()">Voltar às compras</button>
             
             <div class="flex-container">
-                <div class="imagem-produto-central">
-                    <img class="produto1" src="${produto.imagem}" alt="${produto.nome}">
-                </div>
-                <div class="avaliacao-adicionarCarrinho">
-                    <h1 class="nome-produto">${produto.nome}</h1>
-                    <div class="alinhas-flex">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
-                        <img class="notas" src="../Imagens/Design sem nome.png" alt="">
+            <div class="imagem-produto-central">
+            <img class="produto1" src="${produto.imagem}" alt="${produto.nome}">
+            </div>
+            <div class="avaliacao-adicionarCarrinho">
+            <h1 class="nome-produto">${produto.nome}</h1>
+            <div class="alinhas-flex">
+            <img class="notas" src="../Imagens/Design sem nome.png" alt="">
+            <img class="notas" src="../Imagens/Design sem nome.png" alt="">
+            <img class="notas" src="../Imagens/Design sem nome.png" alt="">
+            <img class="notas" src="../Imagens/Design sem nome.png" alt="">
                     </div>
                     <div class="sobre-desconto">
-                        <h3 class="desconto">${produto.desconto}% OFF</h3>
-                        <h3 class="valor-original-produto">R$ ${produto.precoOriginal}</h3>
+                    <h3 class="desconto">${produto.desconto}% OFF</h3>
+                    <h3 class="valor-original-produto">R$ ${produto.precoOriginal}</h3>
                     </div>
                     <h3 class="preco-com-desconto">R$ ${calcularPrecoComDesconto(produto.precoOriginal, produto.desconto)}</h3>
                     <button class="Adicionar-Carrinho">Adicionar ao Carrinho</button>
-                </div>
-
-                <div class="descricao">
+                    </div>
+                    
+                    <div class="descricao">
                     <h1 id="Descricao">Descrição:</h1>
                     <p>${produto.descricao}</p>
-                </div>
-
-                <div class="outros-produtos">
+                    </div>
+                    
+                    <div class="outros-produtos">
                     <h1 class="titulo-outro-produto">Outros produtos:</h1>
                     <div class="outros-produtinhos">
-                        <img class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="Produto">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">Produto: Mouse Gamer</p>
-                            <p class="p2">Descrição breve do produto...</p>
-                        </div>
+                    <img class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="Produto">
+                    <div class="alinhar-outros-produtos">
+                    <p class="p1">Produto: Mouse Gamer</p>
+                    <p class="p2">Descrição breve do produto...</p>
+                    </div>
                     </div>
                     <div class="outros-produtinhos">
-                        <img class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="Produto">
-                        <div class="alinhar-outros-produtos">
-                            <p class="p1">Produto: Teclado Mecânico</p>
-                            <p class="p2">Descrição breve do produto...</p>
-                        </div>
+                    <img class="outros-produtos1" src="../Imagens/MouseGamer 2060x.png" alt="Produto">
+                    <div class="alinhar-outros-produtos">
+                    <p class="p1">Produto: Teclado Mecânico</p>
+                    <p class="p2">Descrição breve do produto...</p>
                     </div>
-                </div>
-
-                <div class="modal-carrinho">
+                    </div>
+                    </div>
+                    
+                    <div class="modal-carrinho">
                     <dialog id="modalCarrinho">
-                        <button id="fecharCarrinho"><strong>X</strong></button>
-                        <h1 class="titulo-carrinho">Suas compras</h1>
-                        <div class="conteiner3" id="container3"></div>
-                        <div class="container-botao">
-                            <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
-                        </div>
+                    <button id="fecharCarrinho"><strong>X</strong></button>
+                    <h1 class="titulo-carrinho">Suas compras</h1>
+                    <div class="conteiner3" id="container3"></div>
+                    <div class="container-botao">
+                    <button id="comprarCarrinho" onclick="comprarCarrinho()">Comprar</button>
+                    </div>
                     </dialog>
-                </div>
-            </div>
-        </body>
-        <script src="../Placeholder.js"></script>
-        </html>
-        `; // conteúdo da página do produto
-        novaPagina.document.write(paginaProduto);
-        novaPagina.document.close();
-    }
-}
-
-function voltar() {
-    window.location.href = "https://arcadestop.vercel.app/";
-}
-
-let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-
+                    </div>
+                    </div>
+                    </body>
+                    <script src="../Placeholder.js"></script>
+                    </html>
+                    `; // conteúdo da página do produto
+                    novaPagina.document.write(paginaProduto);
+                    novaPagina.document.close();
+                }
+            }
+            
+            function voltar() {
+                window.location.href = "https://arcadestop.vercel.app/";
+            }
+            
+            let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            
 function abrirCarrinho() {
     const container = document.getElementById("container3");
     modalCarrinho.showModal();
@@ -268,16 +269,16 @@ function adicionarCarrinho(item, index) {
     const container = document.getElementById("container3");
     const produtoHTML = `
     <div class="produto-item1" data-index="${index}">
-        <div class="imagem-produto">
-            <img src="${item.imagem}" alt="Imagem do produto" class="imagen1" onerror="this.onerror=null; this.src='default.jpg';"> 
-        </div>
-        <div class="produto-info">
-            <h3>${item.nome}</h3>
-            <p class="preco">
-                <div class="preco-desconto">R$ ${item.precoComDesconto}</div>
-            </p>
-            <button class="botao-remover-carrinho" onclick="removerProdutoCarrinho(${index})">Remover</button>
-        </div>
+    <div class="imagem-produto">
+    <img src="${item.imagem}" alt="Imagem do produto" class="imagen1" onerror="this.onerror=null; this.src='default.jpg';"> 
+    </div>
+    <div class="produto-info">
+    <h3>${item.nome}</h3>
+    <p class="preco">
+    <div class="preco-desconto">R$ ${item.precoComDesconto}</div>
+    </p>
+    <button class="botao-remover-carrinho" onclick="removerProdutoCarrinho(${index})">Remover</button>
+    </div>
     </div>
     `;
     container.innerHTML += produtoHTML;
@@ -294,12 +295,18 @@ document.getElementById("fecharCarrinho").onclick = function () {
     modalCarrinho.close();
 };
 
+//Objeto adm
+const adminLogin = {
+
+    email: 'admin@gmail.com',
+    senha: 'admin123'
+}
+
+localStorage.setItem("admin", JSON.stringify(adminLogin));
+
 // Contador de cliques no logo para abrir o modal de login escondido
 const logo = document.getElementById("imagem-logo");
 let contagemCliques = 0;
-
-const EMAIL_VALIDO = "admin@arcadestop.com";
-const SENHA_VALIDO = "adminarcadestop";
 
 logo.addEventListener("click", () => {
     contagemCliques++;
@@ -317,8 +324,8 @@ document.getElementById("botaoLogin").onclick = function() {
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
     
-    if (email === EMAIL_VALIDO && senha === SENHA_VALIDO) {
-        window.location.href = "admin.html"; // redireciona para a página de admin se os dados estiverem corretos
+    if (email === adminLogin.email && senha === adminLogin.senha) {
+        window.location.href = "https://arcadestop.vercel.app"; // redireciona para a página de admin se os dados estiverem corretos
     } else {
         document.getElementById("erro").textContent = "Email ou senha inválidos."; // mensagem de erro
     }

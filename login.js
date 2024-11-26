@@ -39,12 +39,13 @@ senha.addEventListener('keyup', () => {
 function login(){
     const emailValue = email.value
     const senhaValue = senha.value
-    const storedLogin = localStorage.getItem('login')
-    if(storedLogin){
-        const parsedLogin = JSON.parse(storedLogin)
-        if (emailValue === parsedLogin.email && senhaValue === parsedLogin.senha) {
+    const bancoDeDados = localStorage.getItem('registro')
+    if(bancoDeDados){
+        const loginUser = JSON.parse(bancoDeDados)
+        
+        if (emailValue === loginUser.email && senhaValue === loginUser.senha) {
             alert('Login realizado com sucesso!')
-            window.location.href = 'https://arcadestop.vercel.app/'
+            window.location.href="https://arcadestop.vercel.app";
         } else {
             alert('E-mail ou senha incorretos.');
         }
