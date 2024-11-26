@@ -53,15 +53,16 @@ function voltar() {
 
 let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-function abrirCarrin() {
-    const container = document.getElementById("conteiner3");
+function abrirCarrinho() {
+    const container = document.getElementById("container3");
     modalCarrinho.showModal();
     container.innerHTML = '';
     produtosCarrinho.forEach((item, index) => adicionarCarrinho(item, index));
 }
 
+// Adiciona um produto específico no modal do carrinho
 function adicionarCarrinho(item, index) {
-    const container = document.getElementById("conteiner3");
+    const container = document.getElementById("container3");
     const produtoHTML = `
     <div class="produto-item1" data-index="${index}">
         <div class="imagem-produto">
@@ -79,9 +80,10 @@ function adicionarCarrinho(item, index) {
     container.innerHTML += produtoHTML;
 }
 
+// Remove um produto do carrinho
 function removerProdutoCarrinho(index) {
-    produtosCarrinho.splice(index, 1);
-    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho));
+    produtosCarrinho.splice(index, 1); // remove o item pelo índice
+    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho)); // salva no localStorage
     modalCarrinho.close();
 }
 

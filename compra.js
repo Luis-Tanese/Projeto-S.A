@@ -117,3 +117,41 @@ window.onload = function () {
 function voltar() {
     window.location.href = "https://arcadestop.vercel.app/";
 }
+
+function abrirCarrinho() {
+    const container = document.getElementById("container3");
+    modalCarrinho.showModal();
+    container.innerHTML = '';
+    produtosCarrinho.forEach((item, index) => adicionarCarrinho(item, index));
+}
+
+// Adiciona um produto específico no modal do carrinho
+function adicionarCarrinho(item, index) {
+    const container = document.getElementById("container3");
+    const produtoHTML = `
+    <div class="produto-item1" data-index="${index}">
+        <div class="imagem-produto">
+            <img src="${item.imagem}" alt="Imagem do produto" class="imagen1" onerror="this.onerror=null; this.src='default.jpg';"> 
+        </div>
+        <div class="produto-info">
+            <h3>${item.nome}</h3>
+            <p class="preco">
+                <div class="preco-desconto">R$ ${item.precoComDesconto}</div>
+            </p>
+            <button class="botao-remover-carrinho" onclick="removerProdutoCarrinho(${index})">Remover</button>
+        </div>
+    </div>
+    `;
+    container.innerHTML += produtoHTML;
+}
+
+// Remove um produto do carrinho
+function removerProdutoCarrinho(index) {
+    produtosCarrinho.splice(index, 1); // remove o item pelo índice
+    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho)); // salva no localStorage
+    modalCarrinho.close();
+}
+
+document.getElementById("fecharCarrinho").onclick = function () {
+    modalCarrinho.close();
+};

@@ -244,3 +244,145 @@ body {
 .voltar-tela-inicial:hover {
     background-color: #275cb8;
 }
+
+#modalCarrinho {
+    background-color: rgb(204, 204, 204);
+    width: 30%;
+    height: 100%;
+    border: none;
+    position: fixed;
+    left: 68.3%;
+    top: 21.3%;
+}
+
+#modalCarrinho::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.titulo-carrinho {
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 2px solid;
+    padding-bottom: 15px;
+}
+
+#fecharCarrinho {
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s;
+    transform: translateX(0) scale(0.95);
+}
+
+#fecharCarrinho:hover {
+    cursor: pointer;
+    transform: translateX(0) scale(1.05);
+}
+
+.conteiner3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: scroll;
+    max-height: 50%;
+    flex: 1;
+    padding: 15px;
+    gap: 15px;
+}
+
+.produto-item1 {
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px;
+    flex: 1 1 calc(33.33% - 15px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-width: calc(33.33% - 15px);
+}
+
+.produto-item1 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.produto-item1 .produto-info {
+    width: 100%;
+    text-align: center;
+}
+
+.produto-item1 h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.produto-item1 .botao-remover-carrinho {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.produto-item1 .botao-remover-carrinho:hover {
+    background-color: #d32f2f;
+}
+
+.container-botao {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#comprarCarrinho {
+    background-color: #357de9;
+    color: white;
+    font-size: 27px;
+    border: none;
+    border-radius: 15px;
+    width: 35%;
+    height: 7%;
+    transition: transform 0.5s;
+    transform: translateX(0) scale(0.95);
+}
+
+#comprarCarrinho:hover {
+    cursor: pointer;
+    background-color: rgb(93, 176, 253);
+    transform: translateX(0) scale(1.05);
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: white;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(133, 131, 131);
+    border-radius: 10px;
+}
