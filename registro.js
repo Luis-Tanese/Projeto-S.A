@@ -104,6 +104,8 @@ function cadastrar(){
         const registroString = JSON.stringify(registro)
         console.log(registroString + " " + registro)
         localStorage.setItem("registro", registroString)
+
+        alert("Usuário cadastrado!")
         window.location.href = 'https://arcadestop.vercel.app/login.html'
     } else {
         alert('algo está errado.')
