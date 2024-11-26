@@ -4,14 +4,19 @@
 
 <h1 align="center">Projeto S.A</h1>
 
-<p>O objetivo dessa atividade é criar um sistema de gerenciamento de produtos para a empresa "ArcadeStop", utilizando HTML, CSS e JavaScript. </p>
-
 <p align="center">
 <img width="280" height="200" src="https://github.com/user-attachments/assets/2b8a1162-89ea-430e-99fe-87e93ad7ab52" ></img> 
 </p>
 
-<h2>ArcadeStop</h2><p> é um site que vende periféricos para consoles e computadores, oferecendo uma ampla variedade de produtos para gamers de todos os níveis. No ArcadeStop, você encontra desde acessórios essenciais, como controles e teclados, até equipamentos avançados para jogadores que buscam o máximo de desempenho, como mouses de alta precisão, headsets com qualidade de som imersiva, e consoles de antiga geração.
+<h1>ArcadeStop</h1><p> é um site que vende periféricos para consoles e computadores, oferecendo uma ampla variedade de produtos para gamers de todos os níveis. No ArcadeStop, você encontra desde acessórios essenciais, como controles e teclados, até equipamentos avançados para jogadores que buscam o máximo de desempenho, como mouses de alta precisão, headsets com qualidade de som imersiva, e consoles de antiga geração.
 </p>
+
+<h2>Linguagens</h1>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
 
 <h1>🧾Funcionalidades</h1>
  <h2>  Gerenciamento de Produtos</h2>
@@ -39,7 +44,18 @@
   <li>Preto  (#E7E7E7)</li>
   <li>Branco (#000000)</li>
  </ul>
+
+ <h1>🖼 Imagens</h1>
  
+ <h3>Tela Principal</h3>
+ <img src ="https://github.com/user-attachments/assets/3d7408b9-d634-4a90-a915-a3218361df4f"> </img>
+
+ <h3>Tela de Cadastro</h3>
+ <img src ="https://github.com/user-attachments/assets/3d7408b9-d634-4a90-a915-a3218361df4f"> </img>
+
+ <h3>Tela do Produto</h3>
+ <img src ="https://github.com/user-attachments/assets/da9ffddb-da51-4e0a-a5d9-fd8333a7fca6"</img>
+
 <h1>Equipe:</h1>
 
 <ul>
