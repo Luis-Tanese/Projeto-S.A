@@ -295,22 +295,6 @@ h1{
 
 /* Carrinho */
 
-#fecharModal{
-
-    float: right;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: gainsboro;
-    border: none;
-    border-radius: 20px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-#fecharModal:hover{
-    background-color: rgb(133, 131, 131);
-}
-
 #modalCarrinho {
     background-color: rgb(204, 204, 204);
     width: 30%;
