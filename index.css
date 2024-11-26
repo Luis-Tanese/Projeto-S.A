@@ -513,7 +513,7 @@ footer{
 h3:hover{
     cursor: pointer;
     color: #357de9;
-    
+    transition: 0.5s;
 }
 
 /* erm */
