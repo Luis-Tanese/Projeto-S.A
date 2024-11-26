@@ -318,7 +318,7 @@ document.getElementById("botaoLogin").onclick = function() {
     const senha = document.getElementById("senha").value;
     
     if (email === EMAIL_VALIDO && senha === SENHA_VALIDO) {
-        window.location.href = "admin.html"; // redireciona para a página de admin se os dados estiverem corretos
+        window.location.href = "https://arcadestop.vercel.app/admin"; // redireciona para a página de admin se os dados estiverem corretos
     } else {
         document.getElementById("erro").textContent = "Email ou senha inválidos."; // mensagem de erro
     }
@@ -332,5 +332,5 @@ window.onclick = function(event) {
 };
 
 function comprarCarrinho(){
-    window.location.href = "https://arcadestop.vercel.app/compra.html";
+    window.location.href = "https://arcadestop.vercel.app/compra";
 }

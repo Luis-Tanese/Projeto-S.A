@@ -1,9 +1,9 @@
 const email = document.getElementById('email')
 const spanEmail = document.getElementById('spanEmail')
-validEmail = false
+validoEmail = false
 const senha = document.getElementById('senha')
 const spanSenha = document.getElementById('spanSenha')
-validSenha = false
+validoSenha = false
 // Função genérica para validação de campos
 
 // Validação do campo email
@@ -14,9 +14,9 @@ email.addEventListener('keyup', () => {
     if (isValidDomain) {
         spanEmail.setAttribute('style', 'color: green');
         email.setAttribute('style', 'border-color: green');
-        validEmail = true;
+        validoEmail = true;
     } else {
-        validEmail = false;
+        validoEmail = false;
         spanEmail.setAttribute('style', 'color: red');
         email.setAttribute('style', 'border-color: red');
     }
@@ -25,11 +25,11 @@ email.addEventListener('keyup', () => {
 
 senha.addEventListener('keyup', () => {
     if(senha.value.length < 6){
-        validSenha = false
+        validoSenha = false
         spanSenha.setAttribute('style', 'color :red')
         senha.setAttribute('style', 'border-color: red')
     }else{
-        validSenha = true
+        validoSenha = true
         spanSenha.setAttribute('style', 'color: green')
         senha.setAttribute('style', 'border-color: green')
     }
@@ -39,12 +39,12 @@ senha.addEventListener('keyup', () => {
 function login(){
     const emailValue = email.value
     const senhaValue = senha.value
-    const storedLogin = localStorage.getItem('login')
-    if(storedLogin){
-        const parsedLogin = JSON.parse(storedLogin)
-        if (emailValue === parsedLogin.email && senhaValue === parsedLogin.senha) {
-            alert('Login realizado com sucesso!')
-            window.location.href = 'https://arcadestop.vercel.app/'
+    const bancoDeDados = localStorage.getItem('registro');
+    if(bancoDeDados){
+        const loginUser = JSON.parse(bancoDeDados);
+        if (emailValue === loginUser.email && senhaValue === loginUser.senha) {
+            alert('Login realizado com sucesso!');
+            window.location.href="https://arcadestop.vercel.app";
         } else {
             alert('E-mail ou senha incorretos.');
         }
