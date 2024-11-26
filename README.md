@@ -34,9 +34,10 @@
 
  <h2>🎨 Paleta de Cores</h2>
  <ul>
-  <li>Azul</li>
-  <li>Cinza</li>
-  <li>Preto e Branco</li>
+  <li> Azul  (#357EEB)</li>
+  <li>Cinza  (#FFFFFF)</li>
+  <li>Preto  (#E7E7E7)</li>
+  <li>Branco (#000000)</li>
  </ul>
  
 <h1>Equipe:</h1>
