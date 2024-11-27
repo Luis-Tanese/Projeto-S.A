@@ -13,7 +13,7 @@ const produtosMaisVendidos = [
     { nome: "Oculus Quest 2", precoOriginal: 3915, precoDesconto: 2889, imagem: "Imagens/Esgotadoproduto32.png", desconto: 26 },
     { nome: "Asus Rog Phone", precoOriginal: 5200, precoDesconto: 4999, imagem: "Imagens/Esgotadoproduto33.png", desconto: 5 },
 ];
-produtosMaisVendidos.forEach(produto => adicionarProduto("mais-vendidos", produto));
+produtosMaisVendidos.forEach(produto => adicionarProduto("mais-vendidos", produto)); // Adiciona cada produto da lista à seção "Mais Vendidos".
 
 // Lista de produtos para a seção "Periféricos"
 const produtosPerifericos = [
@@ -26,7 +26,7 @@ const produtosPerifericos = [
     { nome: "Headset Gamer Redragon", precoOriginal: 257, precoDesconto: 236, imagem: "Imagens/produto23.png", desconto: 8 },
     { nome: "Mouse Gamer Fallen Pantera Pro", precoOriginal: 499, precoDesconto: 299, imagem: "Imagens/Esgotadoproduto24.png", desconto: 33 },
 ];
-produtosPerifericos.forEach(produto => adicionarProduto("perifericos", produto));
+produtosPerifericos.forEach(produto => adicionarProduto("perifericos", produto)); // Adiciona cada produto da lista à seção "Periféricos".
 
 // Lista de produtos para a seção "Melhores Video Games"
 const produtosMelhores = [
@@ -41,13 +41,13 @@ const produtosMelhores = [
     { nome: "PlayStation 5 Pro", precoOriginal: 6999, precoDesconto: 6509, imagem: "Imagens/Esgotadoproduto16.png", desconto: 3 },
     { nome: "PlayStation 3", precoOriginal: 1299, precoDesconto: 999, imagem: "Imagens/Esgotadoproduto17.png", desconto: 15 },
 ];
-produtosMelhores.forEach(produto => adicionarProduto("melhores-video-games", produto));
+produtosMelhores.forEach(produto => adicionarProduto("melhores-video-games", produto)); // Adiciona cada produto da lista à seção "Melhores Video Games".
 
-// Função para movimentar o carrossel de produtos
+// Função para movimentar o carrossel de produtos horizontalmente
 function moverCarrossel(categoria, direcao) {
     const container = document.getElementById(categoria);
-    const largura = container.querySelector(".produto-item").offsetWidth;
-    container.scrollLeft += largura * direcao;
+    const largura = container.querySelector(".produto-item").offsetWidth; // Obtém a largura de um item do carrossel.
+    container.scrollLeft += largura * direcao; // Move o carrossel para a direita ou esquerda.
 }
 
 // Função que adiciona um produto em uma categoria específica na página
@@ -71,7 +71,7 @@ function adicionarProduto(categoria, produto) {
         </div>
     `;
     } else { // produto disponível com link para a página específica
-        let linkProduto = produto.nome.replace(/\s+/g, "-");
+        let linkProduto = produto.nome.replace(/\s+/g, "-"); // Gera um link baseado no nome do produto, substituindo espaços por hifens.
         produtoHTML = `
         <div class="produto-item">
             <a href="SitesProdutos/${linkProduto}.html" style="text-decoration: none; color: black">
@@ -88,33 +88,35 @@ function adicionarProduto(categoria, produto) {
         </div>
     `;
     }
-    container.innerHTML += produtoHTML;
+    container.innerHTML += produtoHTML; // Adiciona o HTML do produto ao container da categoria.
 }
 
+// Modal de produto esgotado
 const modal = document.getElementById("modalEsgotado");
 const botaoFechar = document.getElementById("fecharModal");
 
 function produtoEsgotado() {
-    modal.showModal();
+    modal.showModal(); // Abre o modal para produtos esgotados.
 }
 botaoFechar.onclick = function () {
-    modal.close();
+    modal.close(); // Fecha o modal ao clicar no botão.
 };
 
+// Troca de banners a cada intervalo de tempo
 let imagens = ["Imagens/produto12.png", "Imagens/produto13.png", "Imagens/produto14.png"];
 let indiceAtual = 0;
-let tempoIntervalo = 5000;
+let tempoIntervalo = 5000; // Tempo de troca do banner em milissegundos.
 let imagemBanner = document.getElementById("imagem-banner");
 let botoes = document.querySelectorAll(".botao-banner");
 
 function mudarBanner() {
-    imagemBanner.src = imagens[indiceAtual]; // troca a imagem do banner
+    imagemBanner.src = imagens[indiceAtual]; // Atualiza a imagem do banner.
     botoes.forEach((btn, idx) => {
-        btn.classList.toggle("active", idx === indiceAtual); // muda o botão ativo
+        btn.classList.toggle("active", idx === indiceAtual); // Define qual botão do banner está ativo.
     });
-    indiceAtual = (indiceAtual + 1) % imagens.length;
+    indiceAtual = (indiceAtual + 1) % imagens.length; // Incrementa o índice e reinicia quando atinge o final da lista.
 }
-setInterval(mudarBanner, tempoIntervalo); // altera o banner a cada intervalo
+setInterval(mudarBanner, tempoIntervalo); // Altera o banner automaticamente.
 mudarBanner();
 
 let produtosRecentes = JSON.parse(localStorage.getItem("produtosRecentesStorage")) || [];
@@ -154,9 +156,10 @@ carregarProdutosRecentes();
 
 // Abre uma nova janela com informações detalhadas do produto
 function abrirProduto(nomeProduto) {
-    const produto = produtosRecentes.find(p => p.nome === nomeProduto);
+    const produto = produtosRecentes.find(p => p.nome === nomeProduto); // Procura o produto pelo nome.
     if (produto) {
-        const novaPagina = window.open("", "_blank");
+        const novaPagina = window.open("", "_blank"); // Abre uma nova aba no navegador.
+        // Gera a página do produto com as informações.
         const paginaProduto = `<!DOCTYPE html>
         <html lang="pt-br">
         <head>
@@ -245,7 +248,7 @@ function abrirProduto(nomeProduto) {
         <script src="../Placeholder.js"></script>
         </html>
         `; // conteúdo da página do produto
-        novaPagina.document.write(paginaProduto);
+        novaPagina.document.write(paginaProduto); // Insere o conteúdo na nova aba.
         novaPagina.document.close();
     }
 }
@@ -254,20 +257,22 @@ function voltar() {
     window.location.href = "https://arcadestop.vercel.app/";
 }
 
+// Gerenciamento de carrinho
 let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
 function abrirCarrinho() {
     const container = document.getElementById("container3");
-    modalCarrinho.showModal();
-    container.innerHTML = '';
-    produtosCarrinho.forEach((item, index) => adicionarCarrinho(item, index));
+    modalCarrinho.showModal(); // Mostra o modal duh
+    container.innerHTML = ''; // Limpa pra n duplicar
+    produtosCarrinho.forEach((item, index) => adicionarCarrinho(item, index)); // Pega o objeto e o índice desse objeto com o foreach
+    // Bonus: O foreach vc pode pegar tanto o objeto quanto o índice desse objeto oq deixa a vida mais fácil
 }
 
 // Adiciona um produto específico no modal do carrinho
 function adicionarCarrinho(item, index) {
     const container = document.getElementById("container3");
     const produtoHTML = `
-    <div class="produto-item1" data-index="${index}">
+    <div class="produto-item1" data-index="${index}"> 
         <div class="imagem-produto">
             <img src="${item.imagem}" alt="Imagem do produto" class="imagen1" onerror="this.onerror=null; this.src='default.jpg';"> 
         </div>
@@ -280,14 +285,16 @@ function adicionarCarrinho(item, index) {
         </div>
     </div>
     `;
+    // Bonus: onerror define uma imagem alternativa caso a imagem do produto não carregue corretamente.
     container.innerHTML += produtoHTML;
 }
 
 // Remove um produto do carrinho
 function removerProdutoCarrinho(index) {
-    produtosCarrinho.splice(index, 1); // remove o item pelo índice
-    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho)); // salva no localStorage
-    modalCarrinho.close();
+    produtosCarrinho.splice(index, 1); // Remove o item pelo índice no array.
+    localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho)); // Atualiza o localStorage com o carrinho modificado.
+    modalCarrinho.close(); // Fecha o modal para aplicar as alterações.
+    abrirCarrinho(); // Reabre o modal para exibir o carrinho atualizado.
 }
 
 document.getElementById("fecharCarrinho").onclick = function () {
@@ -303,8 +310,9 @@ const SENHA_VALIDO = "admin123";
 
 logo.addEventListener("click", () => {
     contagemCliques++;
-    if (contagemCliques === 10) {
+    if (contagemCliques >= 10) {
         document.getElementById("loginModal").style.display = "block";
+        contagemCliques = 0;
     }
 });
 
@@ -318,7 +326,7 @@ document.getElementById("botaoLogin").onclick = function() {
     const senha = document.getElementById("senha").value;
     
     if (email === EMAIL_VALIDO && senha === SENHA_VALIDO) {
-        window.location.href = "https://arcadestop.vercel.app/admin"; // redireciona para a página de admin se os dados estiverem corretos
+        window.location.href = "https://arcadestop.vercel.app/admin.html"; // redireciona para a página de admin se os dados estiverem corretos
     } else {
         document.getElementById("erro").textContent = "Email ou senha inválidos."; // mensagem de erro
     }
@@ -332,5 +340,5 @@ window.onclick = function(event) {
 };
 
 function comprarCarrinho(){
-    window.location.href = "https://arcadestop.vercel.app/compra";
+    window.location.href = "https://arcadestop.vercel.app/compra.html";
 }

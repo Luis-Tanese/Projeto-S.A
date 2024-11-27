@@ -47,7 +47,7 @@
                 </div>
             </form>
             <div class="container-produtos" id="produtos-recentes"></div>
-            <div id="modal-confirmacao" class="modal">
+            <div id="modal-confirmacao" class="modal hidden">
                 <div class="modal-conteudo">
                     <span class="fechar-btn">&times;</span>
                     <p id="texto-confirmacao">Você tem certeza que deseja remover este produto?</p>
@@ -55,8 +55,37 @@
                         <img id="imagem-produto-modal" src="" alt="Imagem do Produto" style="max-width: 150px; max-height: 150px; display: none;">
                         <h3 id="nome-produto-modal"></h3>
                     </div>
-                    <button id="confirmar-remocao" class="botao-remover">Confirmar</button>
-                    <button id="cancelar-remocao" class="botao-cancelar">Cancelar</button>
+                    <button id="confirmar-remocao" class="botao-remover">Remover</button>
+                    <button id="abrir-edicao" class="botao-cancelar">Editar</button>
+                </div>
+            </div>
+            <div id="modal-editar" class="modal hidden">
+                <div class="modal-conteudo">
+                    <span class="fechar-btn" onclick="fecharModalEdicao()">&times;</span>
+                    <h2>Editar Produto</h2>
+                    <form id="form-editar-produto">
+                        <label>
+                            Nome do produto:
+                            <input type="text" id="editar-nome-produto">
+                        </label>
+                        <label>
+                            Descrição do produto:
+                            <textarea id="editar-descricao-produto"></textarea>
+                        </label>
+                        <label>
+                            Valor (R$):
+                            <input type="number" id="editar-preco-produto">
+                        </label>
+                        <label>
+                            Desconto (%):
+                            <input type="number" id="editar-desconto-produto">
+                        </label>
+                        <label>
+                            URL da Imagem:
+                            <input type="text" id="editar-url-imagem">
+                        </label>
+                        <button type="submit" class="botao-vender">Finalizar</button>
+                    </form>
                 </div>
             </div>
         </div>
