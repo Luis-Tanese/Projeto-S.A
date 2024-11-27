@@ -110,3 +110,7 @@ document.getElementById("fecharCarrinho").onclick = function () {
 function abrirCarrin() {
     abrirCarrinho();
 }
+
+function comprarCarrinho(){
+    window.location.href = "https://arcadestop.vercel.app/compra.html";
+}
