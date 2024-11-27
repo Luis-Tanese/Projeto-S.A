@@ -146,7 +146,7 @@ document.getElementById('form-editar-produto').addEventListener('submit', salvar
 
 // Listener para o formulário de envio de produto
 document.getElementById('formulario-produto').addEventListener('submit', function (e) {
-    e.preventDefault(); // Impede o comportamento padrão de envio do formulário.
+    e.preventDefault(); // Impede o envio padrão do formulário
     // Coleta os dados do formulário.
     const nome = document.getElementById('nome-produto').value;
     const descricao = document.getElementById('descricao-produto').value;
