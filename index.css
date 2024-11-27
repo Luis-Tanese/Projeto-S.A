@@ -469,16 +469,13 @@ footer{
     list-style: none;
 }
 
-#footer_contacts{
-    margin-left: 40px;
-    margin-right: 40px;
-}
 
 .social img{
     display: flex;
     margin: 0;
     margin-top: 6%;
-    margin-left: 23%;
+    margin-bottom: 2%;
+    margin-left: 26%;
     width: 25px;
     height: 25px;
 }
@@ -489,17 +486,17 @@ footer{
 }
 .caixa1 h3 {
     text-align: left;
-    margin-left: 13%;
+    margin-left: 21%;
 }
 
 .caixa2 h3 {
     text-align: left;
-    margin-left: 6%;
+    margin-left: 11%;
 
 }
 
 .caixa3 h3 {
-    margin-left: 23%;
+    margin-left: 27%;
     text-align: left;
     
 }
@@ -507,7 +504,6 @@ footer{
 .social h3 {
     text-align: left;
     margin-left: 36%;
-   
 }
 
 h3:hover{
