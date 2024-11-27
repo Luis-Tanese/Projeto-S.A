@@ -52,6 +52,7 @@ function adicionarAoCarrinho() {
         console.error("Erro: Elementos do produto não encontrados.");
     }
 }
+//-----------------------------------------------------------------------------------------------------------------------
 
 // Adiciona um listener ao botão "Adicionar ao Carrinho".
 const botaoCarrinho = document.querySelector('.Adicionar-Carrinho');
