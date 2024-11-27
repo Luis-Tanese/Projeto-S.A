@@ -51,7 +51,10 @@
  <img src ="https://github.com/user-attachments/assets/3d7408b9-d634-4a90-a915-a3218361df4f"> </img>
 
  <h3>Tela de Cadastro</h3>
- <img src ="https://github.com/user-attachments/assets/3d7408b9-d634-4a90-a915-a3218361df4f"> </img>
+ <img src ="https://github.com/user-attachments/assets/9af72769-b3cd-4942-b596-b389477ba587"> </img>
+
+ <h3>Tela de Login</h3>
+ <img src ="https://github.com/user-attachments/assets/672d6660-5a0f-4c49-9b7f-e836510a351a"</img>
 
  <h3>Tela do Produto</h3>
  <img src ="https://github.com/user-attachments/assets/da9ffddb-da51-4e0a-a5d9-fd8333a7fca6"</img>
