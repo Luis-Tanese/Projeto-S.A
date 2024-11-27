@@ -44,7 +44,7 @@ function login() {
         if (emailValue === loginUser.email && senhaValue === loginUser.senha) {
             // Verifica se o e-mail e senha fornecidos correspondem ao registrado.
             alert('Login realizado com sucesso!');
-            window.location.href = "https://arcadestop.vercel.app/"; // Redireciona para a página principal.
+            window.location.href = "https://arcadestop.vercel.app/index.html"; // Redireciona para a página principal.
         } else {
             alert('E-mail ou senha incorretos.'); // Alerta o usuário se os dados não coincidirem.
         }
