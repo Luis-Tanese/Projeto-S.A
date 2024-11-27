@@ -100,7 +100,7 @@ function cadastrar() {
         localStorage.setItem("registro", registroString); // Salva o registro no localStorage.
 
         alert("Usuário cadastrado!");
-        window.location.href = 'https://arcadestop.vercel.app/login.html'; // Redireciona para a página de login.
+        
     } else {
         alert('Algo está errado.'); // Alerta o usuário se alguma validação falhar.
     }
