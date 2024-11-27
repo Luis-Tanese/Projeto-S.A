@@ -1,4 +1,4 @@
-let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || []; // Recupera o carrinho do localStorage ou inicializa como um array vazio.
+let produtosCarrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 let garantiaSelecionada = "sem-garantia"; // Valor padrão para a garantia.
 
 // Função para exibir os produtos no carrinho
@@ -35,7 +35,7 @@ function carregarProdutos() {
     atualizarTotal(); // Atualiza os valores totais do carrinho.
 }
 
-// Função que atualiza os valores totais do carrinho (itens, preço, garantia, entrega)
+// Função que calcula os valores totais do carrinho (itens, preço, garantia, entrega)
 function atualizarTotal() {
     const quantidadeItensEl = document.getElementById("quantidade-itens");
     const precoItensEl = document.getElementById("preco-itens");
@@ -65,21 +65,21 @@ function atualizarTotal() {
 function calcularValorGarantia(quantidade) {
     switch (garantiaSelecionada) {
         case "30-dias":
-            return 12.90 * quantidade; // Calcula custo da garantia de 30 dias por item.
+            return 12.90 * quantidade; 
         case "1-ano":
-            return 39.90 * quantidade; // Calcula custo da garantia de 1 ano por item.
+            return 39.90 * quantidade; 
         default:
-            return 0; // Sem garantia não adiciona custo.
+            return 0;
     }
 }
 
 // Função que atualiza a quantidade de um produto específico no carrinho
 function atualizarQuantidade(indice) {
     const selectQuantidade = document.getElementById(`quantidade-${indice}`);
-    const quantidade = parseInt(selectQuantidade.value); // Converte o valor do select para número inteiro.
+    const quantidade = parseInt(selectQuantidade.value);
     produtosCarrinho[indice].quantidade = quantidade; // Atualiza a quantidade no array.
     localStorage.setItem("carrinho", JSON.stringify(produtosCarrinho)); // Atualiza o carrinho no localStorage.
-    carregarProdutos(); // Recarrega os produtos para refletir a nova quantidade.
+    carregarProdutos(); 
 }
 
 // Função que remove um produto do carrinho pelo índice
