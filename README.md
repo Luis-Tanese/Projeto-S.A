@@ -2,7 +2,7 @@
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=%20FINALIZADO&color=GREEN&style=for-the-badge"/>
 </p>
 
-<h1 align="center">Projeto S.A</h1>
+<h1 align="center">Projeto S.A (Arquivado)</h1>
 
 <p align="center">
 <img width="280" height="200" src="https://github.com/user-attachments/assets/2b8a1162-89ea-430e-99fe-87e93ad7ab52" ></img> 
