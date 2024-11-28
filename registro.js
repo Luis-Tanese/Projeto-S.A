@@ -1,8 +1,8 @@
-const nome = document.getElementById('nome'); // Seleciona o campo de nome.
-const spanNome = document.getElementById('spanNome'); // Seleciona o elemento de feedback visual para o campo de nome.
-validNome = false; // Variável de controle para validação do nome.
-const sobrenome = document.getElementById('sobrenome'); // Seleciona o campo de sobrenome.
-const spanSobrenome = document.getElementById('spanSobrenome'); // Seleciona o elemento de feedback visual para o campo de sobrenome.
+const nome = document.getElementById('nome'); 
+const spanNome = document.getElementById('spanNome');
+validNome = false;
+const sobrenome = document.getElementById('sobrenome');
+const spanSobrenome = document.getElementById('spanSobrenome');
 validSobrenome = false; // Variável de controle para validação do sobrenome.
 const email = document.getElementById('email'); // Seleciona o campo de e-mail.
 const spanEmail = document.getElementById('spanEmail'); // Seleciona o elemento de feedback visual para o campo de e-mail.
