@@ -3,16 +3,16 @@ const spanNome = document.getElementById('spanNome');
 validNome = false;
 const sobrenome = document.getElementById('sobrenome');
 const spanSobrenome = document.getElementById('spanSobrenome');
-validSobrenome = false; // Variável de controle para validação do sobrenome.
-const email = document.getElementById('email'); // Seleciona o campo de e-mail.
-const spanEmail = document.getElementById('spanEmail'); // Seleciona o elemento de feedback visual para o campo de e-mail.
-validEmail = false; // Variável de controle para validação do e-mail.
-const senha = document.getElementById('senha'); // Seleciona o campo de senha.
-const spanSenha = document.getElementById('spanSenha'); // Seleciona o elemento de feedback visual para o campo de senha.
-validSenha = false; // Variável de controle para validação da senha.
-const confirmaSenha = document.getElementById('confirmaSenha'); // Seleciona o campo de confirmação de senha.
-const spanConfirmaSenha = document.getElementById('spanConfirmaSenha'); // Seleciona o elemento de feedback visual para o campo de confirmação de senha.
-validConfirmaSenha = false; // Variável de controle para validação da confirmação de senha.
+validSobrenome = false;
+const email = document.getElementById('email');
+const spanEmail = document.getElementById('spanEmail');
+validEmail = false;
+const senha = document.getElementById('senha');
+const spanSenha = document.getElementById('spanSenha');
+validSenha = false;
+const confirmaSenha = document.getElementById('confirmaSenha');
+const spanConfirmaSenha = document.getElementById('spanConfirmaSenha');
+validConfirmaSenha = false;
 
 // Validação do campo email
 email.addEventListener('keyup', () => {
@@ -96,8 +96,8 @@ function cadastrar() {
             email: emailValue,
             senha: senhaValue
         };
-        const registroString = JSON.stringify(registro); // Converte o registro para uma string JSON.
-        localStorage.setItem("registro", registroString); // Salva o registro no localStorage.
+        const registroString = JSON.stringify(registro);
+        localStorage.setItem("registro", registroString);
 
         alert("Usuário cadastrado!");
         
