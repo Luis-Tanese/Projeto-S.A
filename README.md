@@ -19,7 +19,7 @@
 </ul>
 
 <h1>🧾Funcionalidades</h1>
- <h2>  Gerenciamento de Produtos</h2>
+ <h2>Gerenciamento de Produtos</h2>
  <ul>
  <li><strong>Cadastro de Produtos:</strong> o sistema faz com que os admins registrem novos produtos no sistema.</li> 
  <li><strong>Edição de Produtos:</strong>a edição faz com que seja possível alterar os campos: nome, descrição, preço.</li>
@@ -44,7 +44,7 @@
   <li>Preto  (#E7E7E7)</li>
   <li>Branco (#000000)</li>
  </ul>
-
+ <h1>Link do site: https://arcadestop.vercel.app </h1>
  <h1>🖼 Imagens</h1>
  
  <h3>Tela Principal</h3>
@@ -58,6 +58,12 @@
 
  <h3>Tela do Produto</h3>
  <img src ="https://github.com/user-attachments/assets/da9ffddb-da51-4e0a-a5d9-fd8333a7fca6"</img>
+
+ <h3>Tela de Admin</h3>
+ <img src = "https://github.com/user-attachments/assets/300d9af2-ea49-4c52-92f2-8a6f3bd9e0e9"</img>
+
+ <h3>Tela de Compra</h3>
+ <img src = "https://github.com/user-attachments/assets/bfc4a799-99dd-46b0-b164-3f99a8aa9c6a" </img>
 
 <h1>Equipe:</h1>
 
